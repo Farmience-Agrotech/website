@@ -80,7 +80,7 @@ export function EnhancedLandingPage() {
         <div className="container max-w-6xl mx-auto px-4 flex items-center justify-between">
           <Link className="flex items-center" href="#">
             <Image
-              src="/logo.png"
+              src="/website/logo.png"
               alt="Farmience"
               width={32}
               height={32}
@@ -239,7 +239,7 @@ export function EnhancedLandingPage() {
                 <AchievementCard
                   icon={<Award className="h-12 w-12 text-green-400" />}
                   title="Startup India Recognized"
-                  imageSrc="/startup_india.png?height=100&width=200"
+                  imageSrc="/website/startup_india.png?height=100&width=200"
                   imageAlt="Startup India Badge"
                   content="Recognized by Startup India for pushing boundaries in sustainable technology and innovation"
                 />
