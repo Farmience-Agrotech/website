@@ -274,7 +274,7 @@ export function EnhancedLandingPage() {
             <div className="flex flex-col space-y-4">
               <Link className="flex items-center" href="#">
                 <Image
-                  src="/logo.png"
+                  src="/website/logo.png"
                   alt="Farmience Logo"
                   width={32}
                   height={32}
