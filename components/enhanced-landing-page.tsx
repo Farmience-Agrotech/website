@@ -37,10 +37,10 @@ const useIntersectionObserver = (options = {}) => {
     }
   }, [options])
 
-  return [ref, isVisible]
+  return { ref, isVisible }
 }
 
-const smoothScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, targetId: string) => {
+const smoothScroll = (e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement, MouseEvent>, targetId: string) => {
   e.preventDefault()
   const elem = document.getElementById(targetId)
   elem?.scrollIntoView({
@@ -149,12 +149,12 @@ export function EnhancedLandingPage() {
                   <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-green-400">
                     Engineering Sustainable Solutions for a Resource-Efficient Future
                   </h1>
-                  <p className="mx-auto max-w-[700px] text-gray-200 md:text-xl">At Farmience, we're revolutionizing industries with technology that maximizes resource efficiency and sustainability. Whether it’s AI-driven automation, IoT-powered solutions, or renewable energy integration, we’re leading the charge for a smarter, greener world. Our projects tackle global challenges like waste reduction, energy optimization, and environmental impact by creating tech that’s scalable, accessible, and incredibly efficient.
+                  <p className="mx-auto max-w-[700px] text-gray-200 md:text-xl">At Farmience, we&apos;re revolutionizing industries with technology that maximizes resource efficiency and sustainability. Whether it’s AI-driven automation, IoT-powered solutions, or renewable energy integration, we’re leading the charge for a smarter, greener world. Our projects tackle global challenges like waste reduction, energy optimization, and environmental impact by creating tech that’s scalable, accessible, and incredibly efficient.
                   </p>
                 </div>
                 <div className="space-x-4">
-                  <Button variant="default" className="bg-green-600 hover:bg-green-700 text-white" onClick={(e) => smoothScroll(e as any, "about")}>Learn More</Button>
-                  <Button variant="outline" className="border-green-600 text-green-400 hover:bg-green-600 hover:text-white" onClick={(e) => smoothScroll(e as any, "contact")}>Contact Us</Button>
+                  <Button variant="default" className="bg-green-600 hover:bg-green-700 text-white" onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => smoothScroll(e, "about")}>Learn More</Button>
+                  <Button variant="outline" className="border-green-600 text-green-400 hover:bg-green-600 hover:text-white" onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => smoothScroll(e, "contact")}>Contact Us</Button>
                 </div>
               </div>
             </FadeInSection>
@@ -298,7 +298,7 @@ export function EnhancedLandingPage() {
             </div>
             <div className="flex flex-col space-y-4">
               <h3 className="text-lg font-semibold text-green-400">Newsletter</h3>
-              <p className="text-sm text-gray-400">Wanna stay ahead of the curve? Subscribe now for the latest in tech, sustainability, and mind-blowing innovations straight from the eco-future we're building. 🌱💻🔥</p>
+              <p className="text-sm text-gray-400">Wanna stay ahead of the curve? Subscribe now for the latest in tech, sustainability, and mind-blowing innovations straight from the eco-future we&apos;re building. 🌱💻🔥</p>
               <NewsletterForm />
               <div className="flex space-x-4">
                 <Link href="#" aria-label="Facebook" className="text-gray-400 hover:text-green-400 transition-colors">
@@ -370,8 +370,10 @@ function DynamicBackground() {
   )
 }
 
-function FadeInSection({ children }) {
-  const [ref, isVisible] = useIntersectionObserver({
+import { ReactNode } from "react";
+
+function FadeInSection({ children }: { children: ReactNode }) {
+  const { ref, isVisible } = useIntersectionObserver({
     threshold: 0.1,
     triggerOnce: true
   })
@@ -388,7 +390,15 @@ function FadeInSection({ children }) {
   )
 }
 
-function ProjectCard({ icon, title, description, content, learnMoreLink }) {
+interface ProjectCardProps {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+  content: string;
+  learnMoreLink: string;
+}
+
+function ProjectCard({ icon, title, description, content, learnMoreLink }: ProjectCardProps) {
   const [isHovered, setIsHovered] = useState(false)
   const [isExpanded, setIsExpanded] = useState(false)
 
@@ -426,7 +436,15 @@ function ProjectCard({ icon, title, description, content, learnMoreLink }) {
   )
 }
 
-function AchievementCard({ icon, title, imageSrc, imageAlt, content }) {
+interface AchievementCardProps {
+  icon: React.ReactNode;
+  title: string;
+  imageSrc: string;
+  imageAlt: string;
+  content: string;
+}
+
+function AchievementCard({ icon, title, imageSrc, imageAlt, content }: AchievementCardProps) {
   const [isHovered, setIsHovered] = useState(false)
   const [isExpanded, setIsExpanded] = useState(false)
 
@@ -469,8 +487,8 @@ function AchievementCard({ icon, title, imageSrc, imageAlt, content }) {
   )
 }
 
-function AnimatedListItem({ text }) {
-  const [ref, isVisible] = useIntersectionObserver({
+function AnimatedListItem({ text }: { text: string }) {
+  const { ref, isVisible } = useIntersectionObserver({
     threshold: 0.1,
     triggerOnce: true
   })
@@ -487,7 +505,7 @@ function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
     // Simulate form submission
@@ -500,7 +518,7 @@ function ContactForm() {
   if (isSubmitted) {
     return (
       <div className="text-green-400 font-semibold">
-        Thank you for your message! We'll get back to you soon.
+        Thank you for your message! We&apos;ll get back to you soon.
       </div>
     )
   }
@@ -550,7 +568,7 @@ function NewsletterForm() {
         type="email"
         placeholder="Enter your email"
         value={email}
-        onChange={(e) => setEmail(e.target.value)}
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
         required
         className="bg-gray-800 border-gray-700 text-gray-100 placeholder-gray-400"
       />
@@ -561,7 +579,9 @@ function NewsletterForm() {
   )
 }
 
-function CheckIcon(props) {
+import { SVGProps } from "react";
+
+function CheckIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
