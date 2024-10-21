@@ -147,9 +147,10 @@ export function EnhancedLandingPage() {
               <div className="flex flex-col items-center space-y-4 text-center">
                 <div className="space-y-2">
                   <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-green-400">
-                    Engineering Sustainable Solutions for a Resource-Efficient Future
+                    Maximize Efficiency, Minimize Waste — Tech-Driven Sustainability for the Future
                   </h1>
-                  <p className="mx-auto max-w-[700px] text-gray-200 md:text-xl">At Farmience, we&apos;re revolutionizing industries with technology that maximizes resource efficiency and sustainability. Whether it’s AI-driven automation, IoT-powered solutions, or renewable energy integration, we’re leading the charge for a smarter, greener world. Our projects tackle global challenges like waste reduction, energy optimization, and environmental impact by creating tech that’s scalable, accessible, and incredibly efficient.
+                  <p className="mx-auto max-w-[700px] text-gray-200 md:text-xl">
+                    We create smarter systems that optimize resource use, boost productivity, and ensure your operations are as sustainable as they are profitable. Efficiency and sustainability? We make &apos;em inseparable. 🌱⚡
                   </p>
                 </div>
                 <div className="space-x-4">
@@ -169,15 +170,15 @@ export function EnhancedLandingPage() {
         <section id="projects" className="relative w-full py-12 md:py-24 lg:py-32 bg-gray-800 bg-opacity-50 flex items-center justify-center">
           <div className="relative z-10 container max-w-6xl px-4 md:px-6">
             <FadeInSection>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-green-400">Our Projects</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-green-400">Our Game-Changing Innovations</h2>
             </FadeInSection>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               <FadeInSection>
                 <ProjectCard
                   icon={<Droplet className="h-8 w-8 text-blue-400 mb-2" />}
                   title="HydroFarm"
-                  description="Advanced hydroponic farming solutions"
-                  content="Maximize crop yields with minimal resource usage through our state-of-the-art hydroponic systems. Our HydroFarm technology integrates AI-driven climate control, precision nutrient delivery, and real-time monitoring to create the perfect environment for plant growth."
+                  description="Grow More with Less—Hydroponics Reimagined for Maximum Efficiency"
+                  content="HydroFarm isn&apos;t just another farming system. It's a precision-engineered, resource-efficient solution that uses AI and IoT to maximize crop yield while slashing water and energy use. Every drop, every watt, optimized to perfection. 🌾💧"
                   learnMoreLink="/projects/hydrofarm"
                 />
               </FadeInSection>
@@ -185,8 +186,8 @@ export function EnhancedLandingPage() {
                 <ProjectCard
                   icon={<Zap className="h-8 w-8 text-yellow-400 mb-2" />}
                   title="EcoFuel"
-                  description="Sustainable biofuel production"
-                  content="Transform wastewater into clean, renewable energy with EcoFuel. Using advanced biotechnology, we convert muncipal and industrial wastewater into compressed biogas (CBG) through an efficient anaerobic digestion process. EcoFuel is scalable, sustainable, and turns waste into a powerful resource, reducing environmental impact while fueling a cleaner future. It's not just green energy; it's the future of resource-efficient innovation. 💥🌱⚡"
+                  description="Waste? What Waste? We Turn It Into Clean Energy"
+                  content="We take sewage waste, process it in our high-tech facilities, and deliver clean, compressed biogas straight to you. No need for fancy systems or complicated setups—just pure, efficient energy ready to use. ♻️💥"
                   learnMoreLink="/projects/ecofuel"
                 />
               </FadeInSection>
@@ -194,8 +195,8 @@ export function EnhancedLandingPage() {
                 <ProjectCard
                   icon={<Cog className="h-8 w-8 text-gray-400 mb-2" />}
                   title="Autonomous Lawn Mower"
-                  description="Smart landscaping solution"
-                  content="Automate lawn maintenance with AI-driven precision. Our smart mower is packed with advanced sensors and machine learning algorithms, ensuring maximum efficiency with minimum energy. Perfect for urban spaces that demand sustainable landscaping solutions."
+                  description="Automated, Efficient, and Sustainable Lawn Care"
+                  content="Our autonomous mower does more than just cut grass—it cuts energy use and emissions too. Powered by cutting-edge tech, it delivers precision lawn care with zero human intervention. Maximum efficiency, minimum impact. 🌿⚙️"
                   learnMoreLink="/projects/autonomous-mower"
                 />
               </FadeInSection>
@@ -208,9 +209,9 @@ export function EnhancedLandingPage() {
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:grid-cols-2">
               <FadeInSection>
                 <div className="flex flex-col justify-center space-y-4">
-                  <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-green-400">About Farmience</h2>
+                  <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-green-400">Who We Are: The Sustainability Mavericks</h2>
                   <p className="max-w-[600px] text-gray-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Farmience was born out of a passion to solve global challenges with tech that transforms industries. From sustainable urban farming to cutting-edge energy solutions, we combine AI, IoT, and automation to build a future where resource efficiency isn’t just an option — it’s the standard. Every project we tackle is designed to make a measurable impact, while being scalable, sustainable, and accessible.
+                    At Farmience, we&apos;re not just playing the sustainability game—we&apos;re rewriting the rules. Our mission is simple: maximize resource efficiency while minimizing negative environmental impact. With our tech-driven solutions, we help industries reduce waste, conserve resources, and boost productivity. From clean energy to smarter farming, we fuse AI, IoT, and automation to create systems that work harder, faster, and greener. 🌍🔧
                   </p>
                   <Link href="/about" className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background bg-primary text-primary-foreground hover:bg-primary/90 h-10 py-2 px-4 w-fit">
                     Learn More About Us
@@ -232,7 +233,7 @@ export function EnhancedLandingPage() {
         <section id="achievements" className="relative w-full py-12 md:py-24 lg:py-32 bg-gray-950 bg-opacity-50 flex items-center justify-center">
           <div className="relative z-10 container max-w-6xl px-4 md:px-6">
             <FadeInSection>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-green-400">Recognitions & Achievements</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-green-400">We Don&apos;t Just Talk the Talk—We Walk the Walk!</h2>
             </FadeInSection>
             <div className="flex justify-center">
               <FadeInSection>
@@ -253,9 +254,9 @@ export function EnhancedLandingPage() {
             <FadeInSection>
               <div className="flex flex-col items-center space-y-4 text-center">
                 <div className="space-y-2">
-                  <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-green-400">Get in Touch</h2>
+                  <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-green-400">Ready to transform your farm into a tech-powered beast? Let&apos;s make it happen!</h2>
                   <p className="mx-auto max-w-[600px] text-gray-400 md:text-xl">
-                  Wanna power your future with next-gen tech? Contact us to learn more about our cutting-edge solutions or to schedule a demo that’ll blow your mind! 🤯⚡
+                    Power your future with next-gen tech, contact us to learn more about our cutting-edge solutions or to schedule a demo that&apos;ll blow your mind! 🤯⚡
                   </p>
                 </div>
                 <div className="w-full max-w-sm space-y-2">
