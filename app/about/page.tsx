@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Droplet, Zap, Cog, Menu, ChevronDown, Award, Facebook, Twitter, Instagram, Linkedin, Mail, BookOpen } from "lucide-react"
+import { Droplet, Zap, Cog, Menu, Facebook, Twitter, Instagram, Linkedin, Mail, BookOpen } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import {
@@ -17,7 +17,7 @@ import {
 import { Input } from "@/components/ui/input"
 
 export default function AboutPage() {
-  const [activeSection, setActiveSection] = useState("about")
+  const [activeSection] = useState("about")
   const [scrollProgress, setScrollProgress] = useState(0)
 
   useEffect(() => {
@@ -30,14 +30,6 @@ export default function AboutPage() {
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
-
-  const smoothScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, targetId: string) => {
-    e.preventDefault()
-    const elem = document.getElementById(targetId)
-    elem?.scrollIntoView({
-      behavior: "smooth"
-    })
-  }
 
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900 text-gray-100">
@@ -125,7 +117,7 @@ export default function AboutPage() {
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
               <div>
                 <p className="text-lg mb-4 text-gray-300">
-                    Founded in May 2024, Farmience is still in its early days, but we&apos;re already making noise. What started with just a small team of innovators with a big dream—leveraging tech for sustainability—has quickly turned into a growing movement. We're not some huge corporation (yet), but our ambition is massive.
+                    Founded in May 2024, Farmience is still in its early days, but we&apos;re already making noise. What started with just a small team of innovators with a big dream—leveraging tech for sustainability—has quickly turned into a growing movement. We&apos;re not some huge corporation (yet), but our ambition is massive.
                 </p>
                 <p className="text-lg mb-4 text-gray-300">
                     We may be small, but we&apos;re scrappy, and we&apos;re using our expertise in AI, IoT, automation, and robotics to make resource efficiency not just a goal but a reality.
@@ -150,7 +142,7 @@ export default function AboutPage() {
             <Card className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700">
               <CardContent className="p-6">
                 <p className="text-xl text-center mb-6 text-gray-300">
-                  "To revolutionize industries through innovative, sustainable technologies that maximize efficiency and minimize negative environmental impact."
+                  &quot;To revolutionize industries through innovative, sustainable technologies that maximize efficiency and minimize negative environmental impact.&quot;
                 </p>
                 <ul className="space-y-4">
                   <li className="flex items-start">
@@ -248,7 +240,7 @@ export default function AboutPage() {
           <div className="container max-w-6xl px-4 md:px-6 mx-auto text-center">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8 text-green-400">Join Us in Shaping a Sustainable Future</h2>
             <p className="text-xl mb-8 text-gray-300 max-w-3xl mx-auto">
-              We&apos;re still growing, but if you're someone who&apos;s passionate about sustainability and loves the tech space, hit us up. This is just the beginning, and you can be part of the journey.
+              We&apos;re still growing, but if you&apos;re someone who&apos;s passionate about sustainability and loves the tech space, hit us up. This is just the beginning, and you can be part of the journey.
             </p>
             <Button className="bg-green-600 hover:bg-green-700 text-white">
               Be Part of the Revolution
@@ -287,7 +279,7 @@ export default function AboutPage() {
             </div>
             <div className="flex flex-col space-y-4">
               <h3 className="text-lg font-semibold text-green-400">Newsletter</h3>
-              <p className="text-sm text-gray-400">Wanna stay ahead of the curve? Subscribe now for the latest in tech, sustainability, and mind-blowing innovations straight from the eco-future we're building. 🌱💻🔥</p>
+              <p className="text-sm text-gray-400">Wanna stay ahead of the curve? Subscribe now for the latest in tech, sustainability, and mind-blowing innovations straight from the eco-future we&apos;re building. 🌱💻🔥</p>
               <NewsletterForm />
               <div className="flex space-x-4">
                 <Link href="#" aria-label="Facebook" className="text-gray-400 hover:text-green-400 transition-colors">
