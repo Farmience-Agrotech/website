@@ -127,7 +127,7 @@ export default function AboutPage() {
         <section className="relative w-full py-12 md:py-24 lg:py-32 xl:py-48">
             <div className="flex justify-center mb-12">
                 <Image
-                    src="/website/logo.png"
+                    src="/website/logo.png?height=400&width=600"
                     alt="Farmience Logo"
                     width={600}
                     height={600}
@@ -158,7 +158,7 @@ export default function AboutPage() {
               </div>
               <div className="relative h-64 lg:h-full">
                 <Image
-                  src="/team.jpg?height=400&width=600"
+                  src="/website/team.jpg?height=400&width=600"
                   alt="Farmience team"
                   layout="fill"
                   objectFit="cover"
@@ -245,9 +245,9 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-green-400">Meet Our Founding Team</h2>
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {[
-                { name: "Tejas M K", role: "Founder & CEO", image: "/tejas.jpg?height=300&width=300" },
-                { name: "Lalithesh K", role: "CTO", image: "/lalit.jpg?height=300&width=300" },
-                { name: "Pragati Prithvi", role: "COO", image: "/pragati.jpg?height=300&width=300" },
+                { name: "Tejas M K", role: "Founder & CEO", image: "/website/tejas.jpg?height=300&width=300" },
+                { name: "Lalithesh K", role: "CTO", image: "/website/lalit.jpg?height=300&width=300" },
+                { name: "Pragati Prithvi", role: "COO", image: "/website/pragati.jpg?height=300&width=300" },
               ].map((member) => (
                 <Card key={member.name} className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700">
                   <CardContent className="p-6 flex flex-col items-center">
