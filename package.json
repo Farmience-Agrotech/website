@@ -35,6 +35,7 @@
   },
 
   "scripts": {
+    "dev": "next dev",
     "build": "next build",
     "deploy": "npm run build && gh-pages -d out"
   }

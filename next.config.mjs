@@ -4,4 +4,7 @@ export default {
   assetPrefix: isProd ? '/website/' : '',
   basePath: isProd ? '/website' : '',
   output: 'export', // add this line!
+  images: {
+    unoptimized: true,
+  },
 };
