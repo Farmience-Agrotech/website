@@ -127,11 +127,11 @@ export default function AboutPage() {
         <section className="relative w-full py-12 md:py-24 lg:py-32 xl:py-48">
             <div className="flex justify-center mb-12">
                 <Image
-                    src="/website/logo.png?height=400&width=600"
+                    src="/website/logo.png"
                     alt="Farmience Logo"
-                    width={600}
-                    height={600}
-                    className="h-auto w-auto"
+                    width={400}
+                    height={400}
+                    className="h-400 w-400"
                 />
             </div>
           <div className="container max-w-6xl px-4 md:px-6 mx-auto">
