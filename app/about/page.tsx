@@ -15,6 +15,38 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 import { Input } from "@/components/ui/input"
+import { motion } from "framer-motion"
+
+function DynamicBackground() {
+  return (
+    <div className="fixed inset-0 z-0">
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900" />
+      <div className="absolute inset-0">
+        {[...Array(50)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute bg-white rounded-full"
+            style={{
+              width: Math.random() * 3 + 1,
+              height: Math.random() * 3 + 1,
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+            }}
+            animate={{
+              y: [0, -30, 0],
+              opacity: [0, 1, 0],
+            }}
+            transition={{
+              duration: Math.random() * 3 + 2,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+        ))}
+      </div>
+    </div>
+  )
+}
 
 export default function AboutPage() {
   const [activeSection] = useState("about")
@@ -32,7 +64,8 @@ export default function AboutPage() {
   }, [])
 
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900 text-gray-100">
+    <div className="flex flex-col min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900 text-gray-100 relative">
+      <DynamicBackground />
       <header className="fixed top-0 left-0 right-0 h-14 flex items-center border-b border-gray-700 bg-gray-900 bg-opacity-90 backdrop-blur-sm z-50">
         <div className="container max-w-6xl mx-auto px-4 flex items-center justify-between">
           <Link className="flex items-center" href="/">
@@ -94,7 +127,7 @@ export default function AboutPage() {
         <section className="relative w-full py-12 md:py-24 lg:py-32 xl:py-48">
             <div className="flex justify-center mb-12">
                 <Image
-                    src="/website/huge-logo.png"
+                    src="/website/logo.png"
                     alt="Farmience Logo"
                     width={600}
                     height={600}
