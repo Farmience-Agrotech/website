@@ -154,7 +154,7 @@ export default function AboutPage() {
               <Card className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700">
                 <CardContent className="p-6">
                   <p className="text-lg text-center mb-6 text-white">
-                    At Farmience, we&apos;re the rebels of resource efficiency and sustainability. Founded in May 2024, we&apos;re on a mission to create kick-ass technology that slashes resource waste and boosts sustainability like never before. We may be a small team, but we&apos;ve got the guts, the brains, and just enough caffeine in our veins to change the world. We&apos;re combining cutting-edge tech, innovative solutions, and an obsession with sustainability to bring about a greener, smarter future. 🌱💡
+                    At Farmience, we&apos;re the rebels of resource efficiency and sustainability. Founded in May 2024, we&apos;re on a mission to create technology that slashes resource waste and boosts sustainability like never before. We may be a small team, but we&apos;ve got the guts, the brains, and just enough caffeine in our veins to change the world. We&apos;re combining cutting-edge tech, innovative solutions, and an obsession with sustainability to bring about a greener, smarter future. 🌱💡
                   </p>
                   <div className="flex justify-center space-x-4">
                     <div className="flex items-center">
@@ -199,7 +199,7 @@ export default function AboutPage() {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-white">It all started with a late-night conversation about the world&apos;s pressing environmental issues. We realized that technology could be the key to solving these problems at scale.</p>
+                    <p className="text-white">It all kicked off at a humble tea stall. Over piping hot chai and biscuits, we realized that solving the world&apos;s environmental mess didn&apos;t need suits and boardrooms. It needed tech, grit, and people who gave a damn.</p>
                   </CardContent>
                 </Card>
                 <Card className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700">
@@ -210,7 +210,7 @@ export default function AboutPage() {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-white">We brought together a diverse team of innovators, each with unique skills but a shared passion for sustainability. Our differences became our strength.</p>
+                    <p className="text-white">We brought together a diverse team of innovators, each with unique skills but a shared passion for sustainability, resource-efficiency, and automation. Our differences became our strength.</p>
                   </CardContent>
                 </Card>
                 <Card className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700">
@@ -221,7 +221,7 @@ export default function AboutPage() {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-white">In May 2024, we officially launched Farmience. Our mission: to revolutionize industries through innovative, sustainable technologies that maximize efficiency and minimize environmental impact.</p>
+                    <p className="text-white">In May 2024, we officially launched Farmience. Our mission: to revolutionize industries through innovative, sustainable technologies that maximize efficiency and minimize negative environmental impact.</p>
                   </CardContent>
                 </Card>
               </div>
@@ -238,7 +238,7 @@ export default function AboutPage() {
             >
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-green-400">Our Vision</h2>
               <p className="text-xl text-center mb-6 text-white font-semibold">
-                &qout;We&apos;re not here to blend in; we&apos;re here to lead the charge!&quot;
+                &quot;We&apos;re not here to blend in; we&apos;re here to lead the change!&quot;
               </p>
             </motion.div>
             <motion.div
@@ -249,7 +249,7 @@ export default function AboutPage() {
               <Card className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700">
                 <CardContent className="p-6">
                   <p className="text-lg text-center mb-6 text-white">
-                    Our vision? It&apos;s simple: To lead the world toward a future where technology and sustainability go hand-in-hand. We&apos;re creating tech solutions that are not just efficient, but game-changing in reducing waste and conserving resources, all while maximizing productivity. Imagine a world where your business runs at full throttle without leaving a huge carbon footprint behind. Yeah, we&apos;re building that future.
+                    Our vision? It&apos;s simple: To lead the world towards a future where technology and sustainability go hand-in-hand. We&apos;re creating tech solutions that are not just efficient, but game-changing in reducing waste and conserving resources, all while maximizing productivity. Imagine a world where your business runs at full throttle without leaving a huge carbon footprint behind. Yeah, we&apos;re building that future.
                   </p>
                   <div className="flex justify-center">
                     <Target className="h-16 w-16 text-green-400" />
@@ -406,7 +406,7 @@ export default function AboutPage() {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-white">From AI to IoT to autonomous systems, we&apos;re leveraging the latest tech to create smarter, more efficient solutions. If it doesn&apos;t solve a problem, we&apos;re not interested.</p>
+                    <p className="text-white">From AI to IoT to autonomous systems, we&apos;re leveraging the latest tech to create smarter, more efficient solutions.</p>
                   </CardContent>
                 </Card>
               </div>
@@ -423,7 +423,7 @@ export default function AboutPage() {
             >
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-green-400">Our Values</h2>
               <p className="text-xl text-center mb-6 text-white font-semibold">
-                &quot;We believe in doing things right, or not at all.&quot;
+                &quot;We believe in doing things that make a difference.&quot;
               </p>
             </motion.div>
             <motion.div
@@ -509,7 +509,7 @@ export default function AboutPage() {
                       />
                     </div>
                     <h3 className="text-xl font-semibold mb-2 text-green-400">Lalithesh</h3>
-                    <p className="text-white text-center">The wizard of code and tech, bringing the vision to life with every line of code. If it&apos;s broken, he&apos;ll fix it; if it&apos;s impossible, he&apos;ll make it possible. 🔧👨‍💻</p>
+                    <p className="text-white text-center">The wizard of tech, bringing the vision to life. If it&apos;s broken, he&apos;ll fix it; if it&apos;s impossible, he&apos;ll make it possible. 🔧👨‍💻</p>
                     <div className="flex space-x-4 mt-4">
                       <Link href="#" aria-label="LinkedIn" className="text-gray-400 hover:text-green-400 transition-colors">
                         <Linkedin className="h-5 w-5" />
@@ -535,7 +535,7 @@ export default function AboutPage() {
                       />
                     </div>
                     <h3 className="text-xl font-semibold mb-2 text-green-400">Pragati</h3>
-                    <p className="text-white text-center">The strategist, always 10 steps ahead. From operations to partnerships, she&apos;s the glue holding it all together. Plus, she&apos;s got Tejas&apos; back since day one. 🗣️🔥</p>
+                    <p className="text-white text-center">The strategist, always 10 steps ahead. From operations to partnerships, she&apos;s the glue holding it all together. 🗣️🔥</p>
                     <div className="flex space-x-4 mt-4">
                       <Link href="#" aria-label="LinkedIn" className="text-gray-400 hover:text-green-400 transition-colors">
                         <Linkedin className="h-5 w-5" />
