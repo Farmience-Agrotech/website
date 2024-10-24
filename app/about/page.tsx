@@ -527,7 +527,7 @@ export default function AboutPage() {
                   <CardContent className="p-6 flex flex-col items-center">
                     <div className="w-32 h-32 rounded-full overflow-hidden mb-4">
                       <Image
-                        src="/website/lalit.jpg?height=128&width=128"
+                        src="/website/pragati.jpg?height=128&width=128"
                         alt="Pragati"
                         width={128}
                         height={128}
