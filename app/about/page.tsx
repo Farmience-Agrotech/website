@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Droplet, Zap, Cog, Menu, Facebook, Twitter, Instagram, Linkedin, Mail, BookOpen } from "lucide-react"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Zap, Cog, Menu, Facebook, Instagram, BookOpen, Rocket, Target, Lightbulb, Recycle, Users, Brain, Coffee, Sparkles, TrendingUp } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import {
@@ -82,9 +82,8 @@ export default function AboutPage() {
             {["home", "projects", "about", "achievements", "contact"].map((section) => (
               <Link
                 key={section}
-                className={`text-sm font-medium hover:text-green-400 transition-colors ${
-                  activeSection === section ? "text-green-400" : "text-gray-400"
-                }`}
+                className={`text-sm font-medium hover:text-green-400 transition-colors ${activeSection === section ? "text-green-400" : "text-gray-400"
+                  }`}
                 href={section === "home" ? "/" : `/#${section}`}
               >
                 {section.charAt(0).toUpperCase() + section.slice(1)}
@@ -107,9 +106,8 @@ export default function AboutPage() {
                 {["home", "projects", "about", "achievements", "contact"].map((section) => (
                   <Link
                     key={section}
-                    className={`text-sm font-medium hover:text-green-400 transition-colors ${
-                      activeSection === section ? "text-green-400" : "text-gray-400"
-                    }`}
+                    className={`text-sm font-medium hover:text-green-400 transition-colors ${activeSection === section ? "text-green-400" : "text-gray-400"
+                      }`}
                     href={section === "home" ? "/" : `/#${section}`}
                   >
                     {section.charAt(0).toUpperCase() + section.slice(1)}
@@ -120,168 +118,443 @@ export default function AboutPage() {
           </Sheet>
         </div>
       </header>
-      
+
       <div className="h-1 bg-green-600 fixed top-14 left-0 z-50 transition-all duration-300 ease-out" style={{ width: `${scrollProgress}%` }} />
-      
+
       <main className="flex-1 pt-14">
         <section className="relative w-full py-12 md:py-24 lg:py-32 xl:py-48">
+          <div className="container max-w-6xl px-4 md:px-6 mx-auto">
             <div className="flex justify-center mb-12">
-                <Image
-                    src="/website/logo.png"
-                    alt="Farmience Logo"
-                    width={400}
-                    height={400}
-                    className="h-400 w-400"
-                />
+              <Image
+                src="/website/logo.png"
+                alt="Farmience Logo"
+                width={150}
+                height={150}
+                className="h-[150px] w-[150px]"
+              />
             </div>
-          <div className="container max-w-6xl px-4 md:px-6 mx-auto">
-            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl/none text-center mb-8 text-green-400">
-              About Us: The Sustainability Mavericks
-            </h1>
-            <p className="text-xl text-center mb-12 text-gray-300 max-w-3xl mx-auto">
-                At Farmience, we&apos;re not just playing the sustainability game—we&apos;re rewriting the rules. Our mission? Maximize resource efficiency while minimizing negative environmental impact.
-            </p>
-          </div>
-        </section>
-
-        <section className="relative w-full py-12 md:py-24 lg:py-32 bg-gray-800 bg-opacity-50">
-          <div className="container max-w-6xl px-4 md:px-6 mx-auto">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-green-400">Our Story</h2>
-            <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
-              <div>
-                <p className="text-lg mb-4 text-gray-300">
-                    Founded in May 2024, Farmience is still in its early days, but we&apos;re already making noise. What started with just a small team of innovators with a big dream—leveraging tech for sustainability—has quickly turned into a growing movement. We&apos;re not some huge corporation (yet), but our ambition is massive.
-                </p>
-                <p className="text-lg mb-4 text-gray-300">
-                    We may be small, but we&apos;re scrappy, and we&apos;re using our expertise in AI, IoT, automation, and robotics to make resource efficiency not just a goal but a reality.
-                </p>
-              </div>
-              <div className="relative h-64 lg:h-full">
-                <Image
-                  src="/website/team.jpg?height=400&width=600"
-                  alt="Farmience team"
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-lg"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="relative w-full py-12 md:py-24 lg:py-32">
-          <div className="container max-w-6xl px-4 md:px-6 mx-auto">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-green-400">Our Mission</h2>
-            <Card className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700">
-              <CardContent className="p-6">
-                <p className="text-xl text-center mb-6 text-gray-300">
-                  &quot;To revolutionize industries through innovative, sustainable technologies that maximize efficiency and minimize negative environmental impact.&quot;
-                </p>
-                <ul className="space-y-4">
-                  <li className="flex items-start">
-                    <Droplet className="h-6 w-6 text-green-400 mr-2 flex-shrink-0" />
-                    <span className="text-gray-300">Develop cutting-edge solutions for resource conservation</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Zap className="h-6 w-6 text-green-400 mr-2 flex-shrink-0" />
-                    <span className="text-gray-300">Harness the power of AI and IoT for smarter, more efficient systems</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Cog className="h-6 w-6 text-green-400 mr-2 flex-shrink-0" />
-                    <span className="text-gray-300">Create scalable, adaptable technologies for diverse industries</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
-
-        <section className="relative w-full py-12 md:py-24 lg:py-32 bg-gray-800 bg-opacity-50">
-          <div className="container max-w-6xl px-4 md:px-6 mx-auto">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-green-400">Our Values</h2>
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="mt-8"
+            >
+              <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl/none text-center mb-8 text-green-400">
+                Who We Are
+              </h1>
+              <p className="text-xl text-center mb-12 text-white font-semibold">
+                &quot;You think you&apos;ve seen innovation? Nah, we&apos;re just getting started!&quot;
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
               <Card className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-2 text-green-400">Innovation</h3>
-                  <p className="text-gray-300">We&apos;re all about finding new ways to solve old problems. We experiment, we adapt, and we move fast.</p>
-                </CardContent>
-              </Card>
-              <Card className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-2 text-green-400">Sustainability</h3>
-                  <p className="text-gray-300">Every decision we make is guided by its long-term impact on our planet and its resources.</p>
-                </CardContent>
-              </Card>
-              <Card className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-2 text-green-400">Collaboration</h3>
-                  <p className="text-gray-300">We&apos;re building something bigger than ourselves, and partnerships are key to making it happen.</p>
-                </CardContent>
-              </Card>
-              <Card className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-2 text-green-400">Resource Efficiency</h3>
-                  <p className="text-gray-300">We maximize the output with minimal input, making sure nothing goes to waste.</p>
-                </CardContent>
-              </Card>
-              <Card className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-2 text-green-400">Integrity</h3>
-                  <p className="text-gray-300">We don&apos;t cut corners or play dirty—everything we do is rooted in honesty and ethics.</p>
-                </CardContent>
-              </Card>
-              <Card className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-2 text-green-400">Adaptability</h3>
-                  <p className="text-gray-300">The world&apos;s always changing, and so are we. We evolve and pivot to stay ahead of the curve.</p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-
-        <section className="relative w-full py-12 md:py-24 lg:py-32">
-          <div className="container max-w-6xl px-4 md:px-6 mx-auto">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-green-400">Meet Our Founding Team</h2>
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {[
-                { name: "Tejas M K", role: "Founder & CEO", image: "/website/tejas.jpg?height=300&width=300" },
-                { name: "Lalithesh K", role: "CTO", image: "/website/lalit.jpg?height=300&width=300" },
-                { name: "Pragati Prithvi", role: "COO", image: "/website/pragati.jpg?height=300&width=300" },
-              ].map((member) => (
-                <Card key={member.name} className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700">
-                  <CardContent className="p-6 flex flex-col items-center">
-                    <div className="relative w-32 h-32 mb-4">
-                      <Image
-                        src={member.image}
-                        alt={member.name}
-                        layout="fill"
-                        objectFit="cover"
-                        className="rounded-full"
-                      />
+                  <p className="text-lg text-center mb-6 text-white">
+                    At Farmience, we&apos;re the rebels of resource efficiency and sustainability. Founded in May 2024, we&apos;re on a mission to create technology that slashes resource waste and boosts sustainability like never before. We may be a small team, but we&apos;ve got the guts, the brains, and just enough caffeine in our veins to change the world. We&apos;re combining cutting-edge tech, innovative solutions, and an obsession with sustainability to bring about a greener, smarter future. 🌱💡
+                  </p>
+                  <div className="flex justify-center space-x-4">
+                    <div className="flex items-center">
+                      <Rocket className="h-6 w-6 text-green-400 mr-2" />
+                      <span className="text-white">Innovative</span>
                     </div>
-                    <h3 className="text-xl font-semibold mb-1 text-green-400">{member.name}</h3>
-                    <p className="text-gray-300">{member.role}</p>
+                    <div className="flex items-center">
+                      <Recycle className="h-6 w-6 text-green-400 mr-2" />
+                      <span className="text-white">Sustainable</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Coffee className="h-6 w-6 text-green-400 mr-2" />
+                      <span className="text-white">Caffeinated</span>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
+        </section>
+
+        <section className="relative w-full py-12 md:py-24 lg:py-32 bg-gray-800 bg-opacity-50">
+          <div className="container max-w-6xl px-4 md:px-6 mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-green-400">Our Story</h2>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <div className="grid gap-6 md:grid-cols-3">
+                <Card className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700">
+                  <CardHeader>
+                    <CardTitle className="flex items-center text-green-400">
+                      <Sparkles className="h-6 w-6 mr-2" />
+                      The Spark
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-white">It all kicked off at a humble tea stall. Over piping hot chai and biscuits, we realized that solving the world&apos;s environmental mess didn&apos;t need suits and boardrooms. It needed tech, grit, and people who gave a damn.</p>
                   </CardContent>
                 </Card>
-              ))}
-            </div>
+                <Card className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700">
+                  <CardHeader>
+                    <CardTitle className="flex items-center text-green-400">
+                      <Users className="h-6 w-6 mr-2" />
+                      The Team
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-white">We brought together a diverse team of innovators, each with unique skills but a shared passion for sustainability, resource-efficiency, and automation. Our differences became our strength.</p>
+                  </CardContent>
+                </Card>
+                <Card className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700">
+                  <CardHeader>
+                    <CardTitle className="flex items-center text-green-400">
+                      <Rocket className="h-6 w-6 mr-2" />
+                      The Launch
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-white">In May 2024, we officially launched Farmience. Our mission: to revolutionize industries through innovative, sustainable technologies that maximize efficiency and minimize negative environmental impact.</p>
+                  </CardContent>
+                </Card>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        <section className="relative w-full py-12 md:py-24 lg:py-32">
+          <div className="container max-w-6xl px-4 md:px-6 mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-green-400">Our Vision</h2>
+              <p className="text-xl text-center mb-6 text-white font-semibold">
+                &quot;We&apos;re not here to blend in; we&apos;re here to lead the change!&quot;
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <Card className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700">
+                <CardContent className="p-6">
+                  <p className="text-lg text-center mb-6 text-white">
+                    Our vision? It&apos;s simple: To lead the world towards a future where technology and sustainability go hand-in-hand. We&apos;re creating tech solutions that are not just efficient, but game-changing in reducing waste and conserving resources, all while maximizing productivity. Imagine a world where your business runs at full throttle without leaving a huge carbon footprint behind. Yeah, we&apos;re building that future.
+                  </p>
+                  <div className="flex justify-center">
+                    <Target className="h-16 w-16 text-green-400" />
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
           </div>
         </section>
 
         <section className="relative w-full py-12 md:py-24 lg:py-32 bg-gray-800 bg-opacity-50">
-          <div className="container max-w-6xl px-4 md:px-6 mx-auto text-center">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8 text-green-400">Join Us in Shaping a Sustainable Future</h2>
-            <p className="text-xl mb-8 text-gray-300 max-w-3xl mx-auto">
-              We&apos;re still growing, but if you&apos;re someone who&apos;s passionate about sustainability and loves the tech space, hit us up. This is just the beginning, and you can be part of the journey.
-            </p>
-            <Button className="bg-green-600 hover:bg-green-700 text-white">
-              Be Part of the Revolution
-            </Button>
+          <div className="container max-w-6xl px-4 md:px-6 mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-green-400">Our Mission</h2>
+              <p className="text-xl text-center mb-6 text-white font-semibold">
+                &quot;Less talk, more action. Let&apos;s build a better, cleaner world—one byte at a time.&quot;
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <Card className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700">
+                <CardContent className="p-6">
+                  <p className="text-lg text-center mb-6 text-white">
+                    We&apos;re on a mission to make sustainability a reality through practical, tech-driven solutions. Our goal is to give businesses the tools they need to minimize waste, optimize resources, and enhance productivity. No fluff. Just tech that works. From energy conservation to efficient use of raw materials, we&apos;re making sure that sustainability is more than a buzzword—it&apos;s how the future is built. 🔥
+                  </p>
+                  <div className="flex justify-center space-x-4">
+                    <div className="flex flex-col items-center">
+                      <Lightbulb className="h-12 w-12 text-green-400 mb-2" />
+                      <span className="text-white">Innovate</span>
+                    </div>
+                    <div className="flex flex-col items-center">
+                      <Cog className="h-12 w-12 text-green-400 mb-2" />
+                      <span className="text-white">Optimize</span>
+                    </div>
+                    <div className="flex flex-col items-center">
+                      <Zap className="h-12 w-12 text-green-400 mb-2" />
+                      <span className="text-white">Energize</span>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
           </div>
         </section>
-      </main>
-      
+
+        <section className="relative w-full py-12 md:py-24 lg:py-32">
+          <div className="container max-w-6xl px-4 md:px-6 mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-green-400">Our Approach</h2>
+              <p className="text-xl text-center mb-6 text-white font-semibold">
+                &quot;Solving tomorrow&apos;s problems, today!&quot;
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <div className="grid gap-6 md:grid-cols-3">
+                <Card className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700">
+                  <CardHeader>
+                    <CardTitle className="flex items-center text-green-400">
+                      <Brain className="h-6 w-6 mr-2" />
+                      Innovative Thinking
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-white">We approach every challenge with fresh eyes and innovative ideas. Our team thrives on thinking outside the box to create solutions that others might overlook.</p>
+                  </CardContent>
+                </Card>
+                <Card className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700">
+                  <CardHeader>
+                    <CardTitle className="flex items-center text-green-400">
+                      <TrendingUp className="h-6 w-6 mr-2" />
+                      Continuous Improvement
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-white">We&apos;re never satisfied with the status quo. Our approach involves constant iteration and improvement, always pushing the boundaries of what&apos;s possible.</p>
+                  </CardContent>
+                </Card>
+                <Card className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700">
+                  <CardHeader>
+                    <CardTitle className="flex items-center text-green-400">
+                      <Users className="h-6 w-6 mr-2" />
+                      Collaborative Efforts
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-white">We believe in the power of collaboration. By working closely with our clients and partners, we ensure our solutions are tailored to real-world needs and challenges.</p>
+                  </CardContent>
+                </Card>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        <section className="relative w-full py-12 md:py-24 lg:py-32 bg-gray-800 bg-opacity-50">
+          <div className="container max-w-6xl px-4 md:px-6 mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-green-400">Why We&apos;re Different</h2>
+              <p className="text-xl text-center mb-6 text-white font-semibold">
+                &quot;Because mediocrity is for amateurs, and we&apos;re here to disrupt!&quot;
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <div className="grid gap-6 md:grid-cols-3">
+                <Card className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700">
+                  <CardHeader>
+                    <CardTitle className="flex items-center text-green-400">
+                      <Users className="h-6 w-6 mr-2" />
+                      Scrappy but Smart
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-white">We&apos;re a small team, but we&apos;re nimble and laser-focused on building the future of tech-driven sustainability. We move fast, innovate faster, and leave bureaucracy in the dust.</p>
+                  </CardContent>
+                </Card>
+                <Card className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700">
+                  <CardHeader>
+                    <CardTitle className="flex items-center text-green-400">
+                      <Recycle className="h-6 w-6 mr-2" />
+                      Relentless Focus on Resource Efficiency
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-white">Everything we do centers on maximizing efficiency. Whether it&apos;s reducing energy consumption, cutting water waste, or finding new ways to recycle materials, we&apos;re always thinking about how to do more with less.</p>
+                  </CardContent>
+                </Card>
+                <Card className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700">
+                  <CardHeader>
+                    <CardTitle className="flex items-center text-green-400">
+                      <Zap className="h-6 w-6 mr-2" />
+                      Tech-Powered Sustainability
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-white">From AI to IoT to autonomous systems, we&apos;re leveraging the latest tech to create smarter, more efficient solutions.</p>
+                  </CardContent>
+                </Card>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        <section className="relative w-full py-12 md:py-24 lg:py-32">
+          <div className="container max-w-6xl px-4 md:px-6 mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-green-400">Our Values</h2>
+              <p className="text-xl text-center mb-6 text-white font-semibold">
+                &quot;We believe in doing things that make a difference.&quot;
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <Card className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700">
+                <CardContent className="p-6">
+                  <ul className="space-y-4">
+                    <li className="flex items-start">
+                      <Recycle className="h-6 w-6 text-green-400 mr-2 flex-shrink-0" />
+                      <span className="text-white">Resource Efficiency: It&apos;s in our DNA. Every solution we create is designed to optimize the use of resources—whether it&apos;s water, energy, or materials.</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Lightbulb className="h-6 w-6 text-green-400 mr-2 flex-shrink-0" />
+                      <span className="text-white">Innovation with Purpose: We&apos;re not just innovating for the sake of it. Every breakthrough we make is aimed at solving real-world problems, with sustainability at the core.</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Users className="h-6 w-6 text-green-400 mr-2 flex-shrink-0" />
+                      <span className="text-white">Collaboration: We know we can&apos;t do this alone. That&apos;s why we partner with others who share our vision for a sustainable, tech-driven future.</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
+        </section>
+
+        <section className="relative w-full py-12 md:py-24 lg:py-32 bg-gray-800 bg-opacity-50">
+          <div className="container max-w-6xl px-4 md:px-6 mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-green-400">Our Team</h2>
+              <p className="text-xl text-center mb-6 text-white font-semibold">
+                &quot;Three brains, one mission.&quot;
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <div className="grid gap-8 md:grid-cols-3">
+                <Card className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700">
+                  <CardContent className="p-6 flex flex-col items-center">
+                    <div className="w-32 h-32 rounded-full overflow-hidden mb-4">
+                      <Image
+                        src="/website/tejas.jpg?height=128&width=128"
+                        alt="Tejas"
+                        width={128}
+                        height={128}
+                        className="object-cover"
+                      />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-2 text-green-400">Tejas</h3>
+                    <p className="text-white text-center">The visionary, the hustler, and your favorite problem solver. Leading the charge with bold ideas and a &apos;make it happen&apos; attitude. 🧠💪</p>
+                    <div className="flex space-x-4 mt-4">
+                      <Link href="#" aria-label="LinkedIn" className="text-gray-400 hover:text-green-400 transition-colors">
+                        <Linkedin className="h-5 w-5" />
+                      </Link>
+                      <Link href="#" aria-label="Gmail" className="text-gray-400 hover:text-green-400 transition-colors">
+                        <Mail className="h-5 w-5" />
+                      </Link>
+                      <Link href="#" aria-label="Twitter" className="text-gray-400 hover:text-green-400 transition-colors">
+                        <Twitter className="h-5 w-5" />
+                      </Link>
+                    </div>
+                  </CardContent>
+                </Card>
+                <Card className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700">
+                  <CardContent className="p-6 flex flex-col items-center">
+                    <div className="w-32 h-32 rounded-full overflow-hidden mb-4">
+                      <Image
+                        src="/website/lalit.jpg?height=128&width=128"
+                        alt="Lalithesh"
+                        width={128}
+                        height={128}
+                        className="object-cover"
+                      />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-2 text-green-400">Lalithesh</h3>
+                    <p className="text-white text-center">The wizard of tech, bringing the vision to life. If it&apos;s broken, he&apos;ll fix it; if it&apos;s impossible, he&apos;ll make it possible. 🔧👨‍💻</p>
+                    <div className="flex space-x-4 mt-4">
+                      <Link href="#" aria-label="LinkedIn" className="text-gray-400 hover:text-green-400 transition-colors">
+                        <Linkedin className="h-5 w-5" />
+                      </Link>
+                      <Link href="#" aria-label="Gmail" className="text-gray-400 hover:text-green-400 transition-colors">
+                        <Mail className="h-5 w-5" />
+                      </Link>
+                      <Link href="#" aria-label="Twitter" className="text-gray-400 hover:text-green-400 transition-colors">
+                        <Twitter className="h-5 w-5" />
+                      </Link>
+                    </div>
+                  </CardContent>
+                </Card>
+                <Card className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700">
+                  <CardContent className="p-6 flex flex-col items-center">
+                    <div className="w-32 h-32 rounded-full overflow-hidden mb-4">
+                      <Image
+                        src="/website/lalit.jpg?height=128&width=128"
+                        alt="Pragati"
+                        width={128}
+                        height={128}
+                        className="object-cover"
+                      />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-2 text-green-400">Pragati</h3>
+                    <p className="text-white text-center">The strategist, always 10 steps ahead. From operations to partnerships, she&apos;s the glue holding it all together. 🗣️🔥</p>
+                    <div className="flex space-x-4 mt-4">
+                      <Link href="#" aria-label="LinkedIn" className="text-gray-400 hover:text-green-400 transition-colors">
+                        <Linkedin className="h-5 w-5" />
+                      </Link>
+                      <Link href="#" aria-label="Gmail" className="text-gray-400 hover:text-green-400 transition-colors">
+                        <Mail className="h-5 w-5" />
+                      </Link>
+                      <Link href="#" aria-label="Twitter" className="text-gray-400 hover:text-green-400 transition-colors">
+                        <Twitter className="h-5 w-5" />
+                      </Link>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </motion.div>
+          </div>
+        </section >
+      </main >
+
       <footer className="relative w-full py-12 bg-gray-900 border-t border-gray-700">
         <div className="container max-w-6xl px-4 md:px-6 mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -312,7 +585,7 @@ export default function AboutPage() {
             </div>
             <div className="flex flex-col space-y-4">
               <h3 className="text-lg font-semibold text-green-400">Newsletter</h3>
-              <p className="text-sm text-gray-400">Wanna stay ahead of the curve? Subscribe now for the latest in tech, sustainability, and mind-blowing innovations straight from the eco-future we&apos;re building. 🌱💻🔥</p>
+              <p className="text-sm text-gray-400">Stay updated with our latest innovations and sustainability efforts.</p>
               <NewsletterForm />
               <div className="flex space-x-4">
                 <Link href="#" aria-label="Facebook" className="text-gray-400 hover:text-green-400 transition-colors">
@@ -349,7 +622,7 @@ export default function AboutPage() {
           </div>
         </div>
       </footer>
-    </div>
+    </div >
   )
 }
 
@@ -391,3 +664,5 @@ function NewsletterForm() {
     </form>
   )
 }
+import { Mail } from "lucide-react"
+import { SiLinkedin as Linkedin, SiGitter as Twitter } from "react-icons/si"
