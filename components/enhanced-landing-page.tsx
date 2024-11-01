@@ -80,7 +80,7 @@ export function EnhancedLandingPage() {
         <div className="container max-w-6xl mx-auto px-4 flex items-center justify-between">
           <Link className="flex items-center" href="#">
             <Image
-              src="/website/logo.png"
+              src="/logo.png"
               alt="Farmience"
               width={32}
               height={32}
@@ -275,7 +275,7 @@ export function EnhancedLandingPage() {
             <div className="flex flex-col space-y-4">
               <Link className="flex items-center" href="#">
                 <Image
-                  src="/website/logo.png"
+                  src="/logo.png"
                   alt="Farmience Logo"
                   width={32}
                   height={32}
