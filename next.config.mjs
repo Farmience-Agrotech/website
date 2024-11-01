@@ -6,5 +6,7 @@ export default {
   output: 'export', // add this line!
   images: {
     unoptimized: true,
+    loader: 'imgix',
+    path: isProd ? 'https://farmience.com' : '',
   },
 };
