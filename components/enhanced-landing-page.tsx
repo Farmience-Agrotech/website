@@ -240,7 +240,7 @@ export function EnhancedLandingPage() {
                 <AchievementCard
                   icon={<Award className="h-12 w-12 text-green-400" />}
                   title="Startup India Recognized"
-                  imageSrc="/website/startup_india.png?height=100&width=200"
+                  imageSrc="/startup_india.png?height=100&width=200"
                   imageAlt="Startup India Badge"
                   content="Recognized by Startup India for pushing boundaries in sustainable technology and innovation"
                 />
