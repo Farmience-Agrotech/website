@@ -70,7 +70,7 @@ export default function AboutPage() {
         <div className="container max-w-6xl mx-auto px-4 flex items-center justify-between">
           <Link className="flex items-center" href="/">
             <Image
-              src="/website/logo.png"
+              src="/logo.png"
               alt="Farmience"
               width={32}
               height={32}
@@ -126,7 +126,7 @@ export default function AboutPage() {
           <div className="container max-w-6xl px-4 md:px-6 mx-auto">
             <div className="flex justify-center mb-12">
               <Image
-                src="/website/logo.png"
+                src="/logo.png"
                 alt="Farmience Logo"
                 width={150}
                 height={150}
@@ -475,7 +475,7 @@ export default function AboutPage() {
                   <CardContent className="p-6 flex flex-col items-center">
                     <div className="w-32 h-32 rounded-full overflow-hidden mb-4">
                       <Image
-                        src="/website/tejas.jpg?height=128&width=128"
+                        src="/tejas.jpg?height=128&width=128"
                         alt="Tejas"
                         width={128}
                         height={128}
@@ -501,7 +501,7 @@ export default function AboutPage() {
                   <CardContent className="p-6 flex flex-col items-center">
                     <div className="w-32 h-32 rounded-full overflow-hidden mb-4">
                       <Image
-                        src="/website/lalit.jpg?height=128&width=128"
+                        src="/lalit.jpg?height=128&width=128"
                         alt="Lalithesh"
                         width={128}
                         height={128}
@@ -527,7 +527,7 @@ export default function AboutPage() {
                   <CardContent className="p-6 flex flex-col items-center">
                     <div className="w-32 h-32 rounded-full overflow-hidden mb-4">
                       <Image
-                        src="/website/pragati.jpg?height=128&width=128"
+                        src="/pragati.jpg?height=128&width=128"
                         alt="Pragati"
                         width={128}
                         height={128}
@@ -561,7 +561,7 @@ export default function AboutPage() {
             <div className="flex flex-col space-y-4">
               <Link className="flex items-center" href="/">
                 <Image
-                  src="/website/logo.png"
+                  src="/logo.png"
                   alt="Farmience Logo"
                   width={32}
                   height={32}
