@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Zap, Cog, Menu, Facebook, Instagram, BookOpen, Rocket, Target, Lightbulb, Recycle, Users, Brain, Coffee, Sparkles, TrendingUp } from "lucide-react"
+import { Zap, Cog, Menu, Facebook, Instagram, BookOpen, Rocket, Target, Lightbulb, Recycle, Users, Brain, Coffee, Sparkles, TrendingUp, Twitter, Linkedin, Mail } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import {
@@ -482,7 +482,8 @@ export default function AboutPage() {
                         className="object-cover"
                       />
                     </div>
-                    <h3 className="text-xl font-semibold mb-2 text-green-400">Tejas</h3>
+                    <h2 className="text-xl font-semibold mb-2 text-green-400">Tejas</h2>
+                    <h4 className="text-xl font-semibold mb-2 text-green-200">Founder & CEO</h4>
                     <p className="text-white text-center">The visionary, the hustler, and your favorite problem solver. Leading the charge with bold ideas and a &apos;make it happen&apos; attitude. 🧠💪</p>
                     <div className="flex space-x-4 mt-4">
                       <Link href="#" aria-label="LinkedIn" className="text-gray-400 hover:text-green-400 transition-colors">
@@ -509,6 +510,7 @@ export default function AboutPage() {
                       />
                     </div>
                     <h3 className="text-xl font-semibold mb-2 text-green-400">Lalithesh</h3>
+                    <h4 className="text-xl font-semibold mb-2 text-green-200">CTO</h4>
                     <p className="text-white text-center">The wizard of tech, bringing the vision to life. If it&apos;s broken, he&apos;ll fix it; if it&apos;s impossible, he&apos;ll make it possible. 🔧👨‍💻</p>
                     <div className="flex space-x-4 mt-4">
                       <Link href="#" aria-label="LinkedIn" className="text-gray-400 hover:text-green-400 transition-colors">
@@ -535,6 +537,7 @@ export default function AboutPage() {
                       />
                     </div>
                     <h3 className="text-xl font-semibold mb-2 text-green-400">Pragati</h3>
+                    <h4 className="text-xl font-semibold mb-2 text-green-200">COO</h4>
                     <p className="text-white text-center">The strategist, always 10 steps ahead. From operations to partnerships, she&apos;s the glue holding it all together. 🗣️🔥</p>
                     <div className="flex space-x-4 mt-4">
                       <Link href="#" aria-label="LinkedIn" className="text-gray-400 hover:text-green-400 transition-colors">
@@ -664,5 +667,3 @@ function NewsletterForm() {
     </form>
   )
 }
-import { Mail } from "lucide-react"
-import { SiLinkedin as Linkedin, SiGitter as Twitter } from "react-icons/si"
