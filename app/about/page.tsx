@@ -1,38 +1,15 @@
 "use client"
 
-import { useState, useEffect } from "react"
-import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Zap, Cog, Menu, Rocket, Target, Lightbulb, Recycle, Users, Brain, Coffee, Sparkles, TrendingUp, Twitter, Linkedin, Mail } from "lucide-react"
+import { Zap, Cog, Rocket, Target, Lightbulb, Recycle, Users, Brain, Coffee, Sparkles, TrendingUp, Twitter, Linkedin, Mail } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet"
 import { motion } from "framer-motion"
 import Footer from "@/components/ui/footer"
 import Header from "@/components/ui/header"
 import DynamicBackground from "@/components/ui/dynamic_background"
 
 export default function AboutPage() {
-  const [activeSection] = useState("about")
-  const [scrollProgress, setScrollProgress] = useState(0)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const totalScroll = document.documentElement.scrollHeight - window.innerHeight
-      const currentScroll = window.scrollY
-      setScrollProgress((currentScroll / totalScroll) * 100)
-    }
-
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
 
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900 text-gray-100 relative">

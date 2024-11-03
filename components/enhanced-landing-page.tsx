@@ -43,28 +43,6 @@ const smoothScroll = (e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement,
 }
 
 export function EnhancedLandingPage() {
-  const [activeSection, setActiveSection] = useState("home")
-  const [scrollProgress, setScrollProgress] = useState(0)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const totalScroll = document.documentElement.scrollHeight - window.innerHeight
-      const currentScroll = window.scrollY
-      setScrollProgress((currentScroll / totalScroll) * 100)
-
-      const sections = ["home", "projects", "about", "achievements", "contact"]
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const section = document.getElementById(sections[i])
-        if (section && window.scrollY >= section.offsetTop - 100) {
-          setActiveSection(sections[i])
-          break
-        }
-      }
-    }
-
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
 
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900 text-gray-100 relative">

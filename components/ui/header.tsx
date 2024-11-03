@@ -20,7 +20,7 @@ interface HeaderProps {
     activeSection?: string
 }
 
-export default function Header({ currentPage, activeSection }: HeaderProps) {
+export default function Header({ currentPage }: HeaderProps) {
     const [scrollProgress, setScrollProgress] = useState(0)
     const [currentSection, setCurrentSection] = useState("home")  // Set default to "home"
     const pathname = usePathname()
