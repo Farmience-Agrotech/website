@@ -355,7 +355,7 @@ export default function AboutPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-green-400">Our Team</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-green-400">The Founding Team</h2>
               <p className="text-xl text-center mb-6 text-white font-semibold">
                 &quot;Three brains, one mission.&quot;
               </p>
@@ -405,7 +405,7 @@ export default function AboutPage() {
                       />
                     </div>
                     <h3 className="text-xl font-semibold mb-2 text-green-400">Lalithesh</h3>
-                    <h4 className="text-xl font-semibold mb-2 text-green-200">CTO</h4>
+                    <h4 className="text-xl font-semibold mb-2 text-green-200">Chief Technical Officer</h4>
                     <p className="text-white text-center">The wizard of tech, bringing the vision to life. If it&apos;s broken, he&apos;ll fix it; if it&apos;s impossible, he&apos;ll make it possible. 🔧👨‍💻</p>
                     <div className="flex space-x-4 mt-4">
                       <Link href="#" aria-label="LinkedIn" className="text-gray-400 hover:text-green-400 transition-colors">
@@ -432,7 +432,7 @@ export default function AboutPage() {
                       />
                     </div>
                     <h3 className="text-xl font-semibold mb-2 text-green-400">Pragati</h3>
-                    <h4 className="text-xl font-semibold mb-2 text-green-200">COO</h4>
+                    <h4 className="text-xl font-semibold mb-2 text-green-200">Chief Operations Officer</h4>
                     <p className="text-white text-center">The strategist, always 10 steps ahead. From operations to partnerships, she&apos;s the glue holding it all together. 🗣️🔥</p>
                     <div className="flex space-x-4 mt-4">
                       <Link href="#" aria-label="LinkedIn" className="text-gray-400 hover:text-green-400 transition-colors">
