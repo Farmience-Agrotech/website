@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Zap, Cog, Menu, Facebook, Instagram, BookOpen, Rocket, Target, Lightbulb, Recycle, Users, Brain, Coffee, Sparkles, TrendingUp, Twitter, Linkedin, Mail } from "lucide-react"
+import { Zap, Cog, Menu, Rocket, Target, Lightbulb, Recycle, Users, Brain, Coffee, Sparkles, TrendingUp, Twitter, Linkedin, Mail } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import {
@@ -14,39 +14,10 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
-import { Input } from "@/components/ui/input"
 import { motion } from "framer-motion"
-
-function DynamicBackground() {
-  return (
-    <div className="fixed inset-0 z-0">
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900" />
-      <div className="absolute inset-0">
-        {[...Array(50)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute bg-white rounded-full"
-            style={{
-              width: Math.random() * 3 + 1,
-              height: Math.random() * 3 + 1,
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-            }}
-            animate={{
-              y: [0, -30, 0],
-              opacity: [0, 1, 0],
-            }}
-            transition={{
-              duration: Math.random() * 3 + 2,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          />
-        ))}
-      </div>
-    </div>
-  )
-}
+import Footer from "@/components/ui/footer"
+import Header from "@/components/ui/header"
+import DynamicBackground from "@/components/ui/dynamic_background"
 
 export default function AboutPage() {
   const [activeSection] = useState("about")
@@ -66,60 +37,7 @@ export default function AboutPage() {
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900 text-gray-100 relative">
       <DynamicBackground />
-      <header className="fixed top-0 left-0 right-0 h-14 flex items-center border-b border-gray-700 bg-gray-900 bg-opacity-90 backdrop-blur-sm z-50">
-        <div className="container max-w-6xl mx-auto px-4 flex items-center justify-between">
-          <Link className="flex items-center" href="/">
-            <Image
-              src="/logo.png"
-              alt="Farmience"
-              width={32}
-              height={32}
-              className="h-8 w-8"
-            />
-            <span className="ml-2 text-2xl font-bold text-gray-100">Farmience</span>
-          </Link>
-          <nav className="hidden md:flex gap-4 sm:gap-6">
-            {["home", "projects", "about", "achievements", "contact"].map((section) => (
-              <Link
-                key={section}
-                className={`text-sm font-medium hover:text-green-400 transition-colors ${activeSection === section ? "text-green-400" : "text-gray-400"
-                  }`}
-                href={section === "home" ? "/" : `/#${section}`}
-              >
-                {section.charAt(0).toUpperCase() + section.slice(1)}
-              </Link>
-            ))}
-          </nav>
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="ghost" className="p-0 md:hidden">
-                <Menu className="h-6 w-6" />
-                <span className="sr-only">Toggle menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] bg-gray-900 text-gray-100">
-              <SheetHeader>
-                <SheetTitle className="text-green-400">Menu</SheetTitle>
-                <SheetDescription className="text-gray-400">Navigate through our site</SheetDescription>
-              </SheetHeader>
-              <nav className="flex flex-col gap-4 mt-4">
-                {["home", "projects", "about", "achievements", "contact"].map((section) => (
-                  <Link
-                    key={section}
-                    className={`text-sm font-medium hover:text-green-400 transition-colors ${activeSection === section ? "text-green-400" : "text-gray-400"
-                      }`}
-                    href={section === "home" ? "/" : `/#${section}`}
-                  >
-                    {section.charAt(0).toUpperCase() + section.slice(1)}
-                  </Link>
-                ))}
-              </nav>
-            </SheetContent>
-          </Sheet>
-        </div>
-      </header>
-
-      <div className="h-1 bg-green-600 fixed top-14 left-0 z-50 transition-all duration-300 ease-out" style={{ width: `${scrollProgress}%` }} />
+      <Header currentPage="about" />
 
       <main className="flex-1 pt-14">
         <section className="relative w-full py-12 md:py-24 lg:py-32 xl:py-48">
@@ -557,113 +475,7 @@ export default function AboutPage() {
           </div>
         </section >
       </main >
-
-      <footer className="relative w-full py-12 bg-gray-900 border-t border-gray-700">
-        <div className="container max-w-6xl px-4 md:px-6 mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="flex flex-col space-y-4">
-              <Link className="flex items-center" href="/">
-                <Image
-                  src="/logo.png"
-                  alt="Farmience Logo"
-                  width={32}
-                  height={32}
-                  className="h-8 w-8"
-                />
-                <span className="ml-2 text-2xl font-bold text-gray-100">Farmience</span>
-              </Link>
-              <p className="text-sm text-gray-400">
-                Shaping a greener, smarter future with tech that slays inefficiency and powers up sustainability. 💪🌍
-              </p>
-            </div>
-            <div className="flex flex-col space-y-4">
-              <h3 className="text-lg font-semibold text-green-400">Quick Links</h3>
-              <nav className="flex flex-col space-y-2">
-                <Link className="text-sm  text-gray-400 hover:text-green-400 transition-colors" href="/">Home</Link>
-                <Link className="text-sm text-gray-400 hover:text-green-400 transition-colors" href="/#projects">Projects</Link>
-                <Link className="text-sm text-gray-400 hover:text-green-400 transition-colors" href="/about">About</Link>
-                <Link className="text-sm text-gray-400 hover:text-green-400 transition-colors" href="/#achievements">Achievements</Link>
-                <Link className="text-sm text-gray-400 hover:text-green-400 transition-colors" href="/#contact">Contact</Link>
-              </nav>
-            </div>
-            <div className="flex flex-col space-y-4">
-              <h3 className="text-lg font-semibold text-green-400">Newsletter</h3>
-              <p className="text-sm text-gray-400">Stay updated with our latest innovations and sustainability efforts.</p>
-              <NewsletterForm />
-              <div className="flex space-x-4">
-                <Link href="#" aria-label="Facebook" className="text-gray-400 hover:text-green-400 transition-colors">
-                  <Facebook className="h-6 w-6" />
-                </Link>
-                <Link href="#" aria-label="Twitter" className="text-gray-400 hover:text-green-400 transition-colors">
-                  <Twitter className="h-6 w-6" />
-                </Link>
-                <Link href="#" aria-label="Instagram" className="text-gray-400 hover:text-green-400 transition-colors">
-                  <Instagram className="h-6 w-6" />
-                </Link>
-                <Link href="#" aria-label="LinkedIn" className="text-gray-400 hover:text-green-400 transition-colors">
-                  <Linkedin className="h-6 w-6" />
-                </Link>
-                <Link href="#" aria-label="Email" className="text-gray-400 hover:text-green-400 transition-colors">
-                  <Mail className="h-6 w-6" />
-                </Link>
-                <Link href="#" aria-label="Medium" className="text-gray-400 hover:text-green-400 transition-colors">
-                  <BookOpen className="h-6 w-6" />
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div className="mt-8 border-t border-gray-700 pt-8 flex flex-col sm:flex-row justify-between items-center">
-            <p className="text-xs text-gray-400">© 2024 Farmience. All rights reserved.</p>
-            <nav className="flex gap-4 sm:gap-6 mt-4 sm:mt-0">
-              <Link className="text-xs hover:underline underline-offset-4 text-gray-400 hover:text-gray-100" href="#">
-                Terms of Service
-              </Link>
-              <Link className="text-xs hover:underline underline-offset-4 text-gray-400 hover:text-gray-100" href="#">
-                Privacy Policy
-              </Link>
-            </nav>
-          </div>
-        </div>
-      </footer>
+      <Footer/>
     </div >
-  )
-}
-
-function NewsletterForm() {
-  const [email, setEmail] = useState("")
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false)
-      setIsSubmitted(true)
-      setEmail("")
-    }, 1500)
-  }
-
-  if (isSubmitted) {
-    return (
-      <p className="text-sm text-green-400">Thank you for subscribing to our newsletter!</p>
-    )
-  }
-
-  return (
-    <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2">
-      <Input
-        type="email"
-        placeholder="Enter your email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        required
-        className="bg-gray-800 border-gray-700 text-gray-100 placeholder-gray-400"
-      />
-      <Button type="submit" disabled={isSubmitting} className="bg-green-600 hover:bg-green-700 text-white">
-        {isSubmitting ? "Subscribing..." : "Subscribe"}
-      </Button>
-    </form>
   )
 }
