@@ -59,10 +59,10 @@ export default function Footer() {
                             <Link href="#" aria-label="Instagram" className="text-gray-400 hover:text-green-400 transition-colors">
                                 <Instagram className="h-6 w-6" />
                             </Link>
-                            <Link href="#" aria-label="LinkedIn" className="text-gray-400 hover:text-green-400 transition-colors">
+                            <Link href="https://www.linkedin.com/company/farmience/" aria-label="LinkedIn" className="text-gray-400 hover:text-green-400 transition-colors">
                                 <Linkedin className="h-6 w-6" />
                             </Link>
-                            <Link href="#" aria-label="Email" className="text-gray-400 hover:text-green-400 transition-colors">
+                            <Link href="mailto:support@farmience.com" aria-label="Email" className="text-gray-400 hover:text-green-400 transition-colors">
                                 <Mail className="h-6 w-6" />
                             </Link>
                             <Link href="#" aria-label="Medium" className="text-gray-400 hover:text-green-400 transition-colors">
