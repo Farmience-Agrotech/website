@@ -50,22 +50,22 @@ export default function Footer() {
                         <p className="text-sm text-gray-400">Wanna stay ahead of the curve? Subscribe now for the latest in tech, sustainability, and mind-blowing innovations straight from the eco-future we&apos;re building. 🌱💻🔥</p>
                         <NewsletterForm />
                         <div className="flex space-x-4">
-                            <Link href="#" aria-label="Facebook" className="text-gray-400 hover:text-green-400 transition-colors">
+                            <Link href="#" aria-label="Facebook" className="text-gray-400 hover:text-green-400 transition-colors" target="_blank" rel="noopener noreferrer">
                                 <Facebook className="h-6 w-6" />
                             </Link>
-                            <Link href="#" aria-label="Twitter" className="text-gray-400 hover:text-green-400 transition-colors">
+                            <Link href="#" aria-label="Twitter" className="text-gray-400 hover:text-green-400 transition-colors" target="_blank" rel="noopener noreferrer">
                                 <Twitter className="h-6 w-6" />
                             </Link>
-                            <Link href="#" aria-label="Instagram" className="text-gray-400 hover:text-green-400 transition-colors">
+                            <Link href="#" aria-label="Instagram" className="text-gray-400 hover:text-green-400 transition-colors" target="_blank" rel="noopener noreferrer">
                                 <Instagram className="h-6 w-6" />
                             </Link>
-                            <Link href="https://www.linkedin.com/company/farmience/" aria-label="LinkedIn" className="text-gray-400 hover:text-green-400 transition-colors">
+                            <Link href="https://www.linkedin.com/company/farmience/" aria-label="LinkedIn" className="text-gray-400 hover:text-green-400 transition-colors" target="_blank" rel="noopener noreferrer">
                                 <Linkedin className="h-6 w-6" />
                             </Link>
-                            <Link href="mailto:support@farmience.com" aria-label="Email" className="text-gray-400 hover:text-green-400 transition-colors">
+                            <Link href="mailto:support@farmience.com" aria-label="Email" className="text-gray-400 hover:text-green-400 transition-colors" target="_blank" rel="noopener noreferrer">
                                 <Mail className="h-6 w-6" />
                             </Link>
-                            <Link href="#" aria-label="Medium" className="text-gray-400 hover:text-green-400 transition-colors">
+                            <Link href="#" aria-label="Medium" className="text-gray-400 hover:text-green-400 transition-colors" target="_blank" rel="noopener noreferrer">
                                 <BookOpen className="h-6 w-6" />
                             </Link>
                         </div>
