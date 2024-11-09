@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, Suspense } from "react"
+import { useState, Suspense } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import {
@@ -12,7 +12,6 @@ import {
     Maximize,
     BarChart3,
     PlayCircle,
-    CheckCircle2,
     CloudRain,
     Thermometer,
     MapPin,
@@ -76,22 +75,10 @@ function DynamicCard({ icon: Icon, title, description, hoverColor = 'green-400' 
 }
 
 export default function HydroFarmProject() {
-    const [activeSection, setActiveSection] = useState("hero")
-    const [scrollProgress, setScrollProgress] = useState(0)
-
-    useEffect(() => {
-        const handleScroll = () => {
-            const totalScroll = document.documentElement.scrollHeight - window.innerHeight
-            const currentScroll = window.scrollY
-            setScrollProgress((currentScroll / totalScroll) * 100)
-        }
-
-        window.addEventListener("scroll", handleScroll)
-        return () => window.removeEventListener("scroll", handleScroll)
-    }, [])
+    const [scrollProgress] = useState(0)
 
     const problemItems = [
-        { icon: CloudRain, title: "Water Scarcity", description: "Traditional farming wastes water like it’s unlimited. We’re here to change that." },
+        { icon: CloudRain, title: "Water Scarcity", description: "Traditional farming wastes water like it&quot;s unlimited. We’re here to change that." },
         { icon: Thermometer, title: "Unpredictable Climate", description: "Random weather patterns keep screwing with crop yields. It’s time for control." },
         { icon: MapPin, title: "Shrinking Arable Land", description: "Farmable land is vanishing thanks to overuse. We need efficient, space-saving solutions." },
         { icon: Zap, title: "Resource Inefficiency", description: "Agriculture gobbles energy and materials like a monster. Let’s tame it." },
@@ -264,7 +251,7 @@ export default function HydroFarmProject() {
                                     <ul className="space-y-4">
                                         <li className="flex items-start">
                                             <ChevronRight className="h-6 w-6 text-green-400 mr-2 flex-shrink-0" />
-                                            <span className="text-gray-300"><strong>Space Efficiency:</strong> HydroFarm's vertical farming design maximizes space usage, allowing for higher crop density in smaller areas.</span>
+                                            <span className="text-gray-300"><strong>Space Efficiency:</strong> HydroFarm&quot;s vertical farming design maximizes space usage, allowing for higher crop density in smaller areas.</span>
                                         </li>
                                         <li className="flex items-start">
                                             <ChevronRight className="h-6 w-6 text-green-400 mr-2 flex-shrink-0" />
@@ -398,7 +385,7 @@ export default function HydroFarmProject() {
                                     </Canvas>
                                 </Suspense>
                             </div>
-                            <p className="text-center mt-4 text-gray-300">Interact with the 3D model to explore HydroFarm's setup</p>
+                            <p className="text-center mt-4 text-gray-300">Interact with the 3D model to explore HydroFarm&quot;s setup</p>
                         </motion.div>
                     </div>
                 </section>
@@ -513,19 +500,19 @@ export default function HydroFarmProject() {
                                 <AccordionItem value="item-1">
                                     <AccordionTrigger className="text-green-400">How does HydroFarm compare to traditional farming?</AccordionTrigger>
                                     <AccordionContent className="text-gray-300">
-                                        HydroFarm uses up to 90% less water, produces 30% higher yields, and allows for year-round cultivation regardless of outdoor conditions. It's more efficient, sustainable, and predictable than traditional farming methods.
+                                        HydroFarm uses up to 90% less water, produces 30% higher yields, and allows for year-round cultivation regardless of outdoor conditions. It&quot;s more efficient, sustainable, and predictable than traditional farming methods.
                                     </AccordionContent>
                                 </AccordionItem>
                                 <AccordionItem value="item-2">
                                     <AccordionTrigger className="text-green-400">What types of crops can be grown with HydroFarm?</AccordionTrigger>
                                     <AccordionContent className="text-gray-300">
-                                        HydroFarm is suitable for a wide variety of crops, including leafy greens, herbs, tomatoes, peppers, and even some root vegetables. We're constantly expanding our crop database to support more varieties.
+                                        HydroFarm is suitable for a wide variety of crops, including leafy greens, herbs, tomatoes, peppers, and even some root vegetables. We&quot;re constantly expanding our crop database to support more varieties.
                                     </AccordionContent>
                                 </AccordionItem>
                                 <AccordionItem value="item-3">
                                     <AccordionTrigger className="text-green-400">How much technical knowledge is required to operate HydroFarm?</AccordionTrigger>
                                     <AccordionContent className="text-gray-300">
-                                        HydroFarm is designed to be user-friendly. While some basic training is provided, the AI-driven system handles most of the complex decisions. You don't need to be a tech expert to successfully operate HydroFarm.
+                                        HydroFarm is designed to be user-friendly. While some basic training is provided, the AI-driven system handles most of the complex decisions. You don&quot;t need to be a tech expert to successfully operate HydroFarm.
                                     </AccordionContent>
                                 </AccordionItem>
                             </Accordion>
