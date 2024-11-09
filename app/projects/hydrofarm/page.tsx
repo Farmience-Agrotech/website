@@ -100,12 +100,11 @@ export default function HydroFarmProject() {
 
 
     const solutionItems = [
-        { icon: Cpu, title: "Real-Time Environmental Monitoring", description: "IoT sensors provide constant feedback on temperature, humidity, and light, maintaining optimal conditions effortlessly." },
         { icon: Brain, title: "Intelligent Resource Optimization", description: "Advanced AI adapts to each plant's needs, saving resources and maximizing yield through predictive adjustments." },
-        { icon: Droplet, title: "Water-Efficient Growth with Hydroponics", description: "Our hydroponic system slashes water use by up to 90%, eliminating soil dependency and cutting waste." },
         { icon: Smartphone, title: "Adaptive System Control", description: "Smart systems auto-adjust climate, light, and nutrients, responding instantly to environmental changes and plant needs." },
-        { icon: Cloud, title: "Remote Access & Cloud Integration", description: "Monitor and manage your entire farm remotely, anytime, anywhere, with seamless cloud connectivity." },
-    ]    
+        { icon: Cloud, title: "Remote Access & Real-Time Monitoring", description: "Monitor and manage your entire farm remotely, anytime, anywhere, with seamless cloud connectivity." },
+        { icon: Layers, title: "Modular & Scalable", description: "Customize, expand, or swap out components as you grow. HydroFarm is designed to scale up with your farm's ambitions." },
+    ]
 
     return (
         <div className="flex flex-col min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900 text-gray-100 relative">
@@ -139,7 +138,7 @@ export default function HydroFarmProject() {
                     </div>
                 </section>
 
-                <section id="problem" className="relative w-full py-12 md:py-24 lg:py-32 bg-gray-800 bg-opacity-50">
+                <section id="problem" className="relative w-full py-12 md:py-24 lg:py-32 bg-gray-800 bg-opacity-40">
                     <div className="container max-w-6xl px-4 md:px-6 mx-auto">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
@@ -191,7 +190,7 @@ export default function HydroFarmProject() {
                     </div>
                 </section>
 
-                <section id="features" className="relative w-full py-12 md:py-24 lg:py-32  bg-gray-800 bg-opacity-50">
+                <section id="features" className="relative w-full py-12 md:py-24 lg:py-32  bg-gray-800 bg-opacity-40">
                     <div className="container max-w-6xl px-4 md:px-6 mx-auto">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
@@ -236,12 +235,65 @@ export default function HydroFarmProject() {
                                     title="Modular & Scalable Design"
                                     description="Customize, expand, or swap out components as you grow. HydroFarm is designed to scale up with your farm&quot;s ambitions."
                                 />
+                                <DynamicCard
+                                    icon={BarChart3}
+                                    title="Yield Prediction & Harvest Scheduling"
+                                    description="AI-driven yield prediction models and automated harvest scheduling ensure you know exactly when and how much to harvest, maximizing efficiency and profitability."
+                                />
                             </div>
                         </motion.div>
                     </div>
                 </section>
 
-                <section id="impact" className="relative w-full py-12 md:py-24 lg:py-32">
+                <section id="tech" className="relative w-full py-12 md:py-24 lg:py-32">
+                    <div className="container max-w-6xl px-4 md:px-6 mx-auto">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8 }}
+                        >
+                            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-green-400">Advantages</h2>
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.2 }}
+                        >
+                            <Card className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700">
+                                <CardContent className="p-6">
+                                    <ul className="space-y-4">
+                                        <li className="flex items-start">
+                                            <ChevronRight className="h-6 w-6 text-green-400 mr-2 flex-shrink-0" />
+                                            <span className="text-gray-300"><strong>Space Efficiency:</strong> HydroFarm's vertical farming design maximizes space usage, allowing for higher crop density in smaller areas.</span>
+                                        </li>
+                                        <li className="flex items-start">
+                                            <ChevronRight className="h-6 w-6 text-green-400 mr-2 flex-shrink-0" />
+                                            <span className="text-gray-300"><strong>Resource Conservation:</strong> The system uses up to 90% less water and fewer nutrients compared to traditional farming methods.</span>
+                                        </li>
+                                        <li className="flex items-start">
+                                            <ChevronRight className="h-6 w-6 text-green-400 mr-2 flex-shrink-0" />
+                                            <span className="text-gray-300"><strong>Sustainability:</strong> HydroFarm reduces the environmental impact of farming by minimizing resource use and enabling local food production.</span>
+                                        </li>
+                                        <li className="flex items-start">
+                                            <ChevronRight className="h-6 w-6 text-green-400 mr-2 flex-shrink-0" />
+                                            <span className="text-gray-300"><strong>Scalable:</strong> The modular design allows for easy expansion and customization to meet the needs of growing farms.</span>
+                                        </li>
+                                        <li className="flex items-start">
+                                            <ChevronRight className="h-6 w-6 text-green-400 mr-2 flex-shrink-0" />
+                                            <span className="text-gray-300"><strong>Low-Maintenance:</strong> Automated systems handle most of the work, reducing the need for manual labor and maintenance.</span>
+                                        </li>
+                                        <li className="flex items-start">
+                                            <ChevronRight className="h-6 w-6 text-green-400 mr-2 flex-shrink-0" />
+                                            <span className="text-gray-300"><strong>Year-Round Growing:</strong> Controlled environments allow for continuous crop production regardless of external weather conditions.</span>
+                                        </li>
+                                    </ul>
+                                </CardContent>
+                            </Card>
+                        </motion.div>
+                    </div>
+                </section>
+
+                <section id="impact" className="relative w-full py-12 md:py-24 lg:py-32 bg-gray-800 bg-opacity-40">
                     <div className="container max-w-6xl px-4 md:px-6  mx-auto">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
@@ -272,12 +324,27 @@ export default function HydroFarmProject() {
                                     title="Reduced Carbon Footprint"
                                     description="By optimizing resource use and enabling local food production, HydroFarm significantly reduces the carbon footprint associated with agriculture."
                                 />
+                                <DynamicCard
+                                    icon={MapPin}
+                                    title="Access to Fresh Produce"
+                                    description="HydroFarm ensures a steady supply of fresh, locally-grown produce, reducing the need for long-distance transportation."
+                                />
+                                <DynamicCard
+                                    icon={Users}
+                                    title="Support for Local Economy"
+                                    description="By promoting local farming, HydroFarm helps boost the local economy and create job opportunities within the community."
+                                />
+                                <DynamicCard
+                                    icon={Cpu}
+                                    title="Increased Food Security"
+                                    description="HydroFarm's efficient and reliable farming methods contribute to greater food security, ensuring a stable food supply even in challenging conditions."
+                                />
                             </div>
                         </motion.div>
                     </div>
                 </section>
 
-                <section id="video" className="relative w-full py-12 md:py-24 lg:py-32 bg-gray-800 bg-opacity-50">
+                <section id="video" className="relative w-full py-12 md:py-24 lg:py-32">
                     <div className="container max-w-6xl px-4 md:px-6 mx-auto">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
@@ -307,7 +374,7 @@ export default function HydroFarmProject() {
                     </div>
                 </section>
 
-                <section id="experience" className="relative w-full py-12 md:py-24 lg:py-32">
+                <section id="experience" className="relative w-full py-12 md:py-24 lg:py-32 bg-gray-800 bg-opacity-40">
                     <div className="container max-w-6xl px-4 md:px-6 mx-auto">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
@@ -335,47 +402,7 @@ export default function HydroFarmProject() {
                         </motion.div>
                     </div>
                 </section>
-
-                <section id="tech" className="relative w-full py-12 md:py-24 lg:py-32 bg-gray-800 bg-opacity-50">
-                    <div className="container max-w-6xl px-4 md:px-6 mx-auto">
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8 }}
-                        >
-                            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-green-400">Sustainability & Tech</h2>
-                        </motion.div>
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8, delay: 0.2 }}
-                        >
-                            <Card className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700">
-                                <CardContent className="p-6">
-                                    <ul className="space-y-4">
-                                        <li className="flex items-start">
-                                            <ChevronRight className="h-6 w-6 text-green-400 mr-2 flex-shrink-0" />
-                                            <span className="text-gray-300"><strong>IoT Sensor Network:</strong> A comprehensive array of sensors monitoring temperature, humidity, pH levels, and more in real-time.</span>
-                                        </li>
-                                        <li className="flex items-start">
-                                            <ChevronRight className="h-6 w-6 text-green-400 mr-2 flex-shrink-0" />
-                                            <span className="text-gray-300"><strong>AI-Powered Control Systems:</strong> Machine learning algorithms that analyze sensor data and make intelligent decisions for optimal plant growth.</span>
-                                        </li>
-                                        <li className="flex items-start">
-                                            <ChevronRight className="h-6 w-6 text-green-400 mr-2 flex-shrink-0" />
-                                            <span className="text-gray-300"><strong>Cloud-Based Management Platform:</strong> A user-friendly interface allowing farmers to monitor and control their hydroponic systems from anywhere.</span>
-                                        </li>
-                                        <li className="flex items-start">
-                                            <ChevronRight className="h-6 w-6 text-green-400 mr-2 flex-shrink-0" />
-                                            <span className="text-gray-300"><strong>Predictive Maintenance:</strong> AI algorithms that forecast potential issues before they occur, minimizing downtime and crop loss.</span>
-                                        </li>
-                                    </ul>
-                                </CardContent>
-                            </Card>
-                        </motion.div>
-                    </div>
-                </section>
-
+        
                 <section id="phase" className="relative w-full py-12 md:py-24 lg:py-32">
                     <div className="container max-w-6xl px-4 md:px-6 mx-auto">
                         <motion.div
@@ -394,27 +421,31 @@ export default function HydroFarmProject() {
                                 <CardContent className="p-6">
                                     <div className="flex items-center justify-between mb-4">
                                         <span className="text-lg font-semibold text-green-400">Development Progress</span>
-                                        <span className="text-lg font-semibold text-green-400">75%</span>
+                                        <span className="text-lg font-semibold text-green-400">15%</span>
                                     </div>
                                     <div className="w-full bg-gray-700 rounded-full h-2.5">
-                                        <div className="bg-green-600 h-2.5 rounded-full" style={{ width: "75%" }}></div>
+                                        <div className="bg-green-600 h-2.5 rounded-full" style={{ width: "15%" }}></div>
                                     </div>
                                     <ul className="mt-6 space-y-2">
                                         <li className="flex items-center text-gray-300">
-                                            <CheckCircle2 className="h-5 w-5 text-green-400 mr-2" />
+                                            <BarChart3 className="h-5 w-5 text-green-400 mr-2" />
+                                            <span>Research Phase (In Progress)`</span>
+                                        </li>
+                                        <li className="flex items-center text-gray-300">
+                                            <Maximize className="h-5 w-5 text-gray-400 mr-2" />
                                             <span>Prototype Development</span>
                                         </li>
                                         <li className="flex items-center text-gray-300">
-                                            <CheckCircle2 className="h-5 w-5 text-green-400 mr-2" />
+                                            <Maximize className="h-5 w-5 text-gray-400 mr-2" />
                                             <span>Initial Field Testing</span>
                                         </li>
                                         <li className="flex items-center text-gray-300">
-                                            <CheckCircle2 className="h-5 w-5 text-green-400 mr-2" />
+                                            <Maximize className="h-5 w-5 text-gray-400 mr-2" />
                                             <span>AI Algorithm Refinement</span>
                                         </li>
                                         <li className="flex items-center text-gray-300">
-                                            <BarChart3 className="h-5 w-5 text-yellow-400 mr-2" />
-                                            <span>Large-Scale Implementation (In Progress)</span>
+                                            <Maximize className="h-5 w-5 text-gray-400 mr-2" />
+                                            <span>Large-Scale Implementation</span>
                                         </li>
                                         <li className="flex items-center text-gray-300">
                                             <Maximize className="h-5 w-5 text-gray-400 mr-2" />
@@ -427,7 +458,7 @@ export default function HydroFarmProject() {
                     </div>
                 </section>
 
-                <section id="cta" className="relative w-full py-12 md:py-24 lg:py-32 bg-gray-800 bg-opacity-50">
+                <section id="cta" className="relative w-full py-12 md:py-24 lg:py-32 bg-gray-800 bg-opacity-40">
                     <div className="container max-w-6xl px-4 md:px-6 mx-auto">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
