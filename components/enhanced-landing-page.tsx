@@ -316,35 +316,76 @@ function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
-    // Simulate form submission
-    setTimeout(() => {
+
+    try {
+      const formData = new FormData(e.currentTarget)
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData as any).toString()
+      })
+      if (response.ok) {
+        setIsSubmitted(true)
+      } else {
+        throw new Error('Form submission failed')
+      }
+    } catch (error) {
+      console.error('Error:', error)
+      alert('There was an error submitting the form. Please try again.')
+    } finally {
       setIsSubmitting(false)
-      setIsSubmitted(true)
-    }, 2000)
+    }
   }
 
   if (isSubmitted) {
     return (
       <div className="text-green-400 font-semibold">
-        Thank you for your message! We&apos;ll get back to you soon.
+        Thank you for your message! We'll get back to you soon.
       </div>
     )
   }
 
   return (
-    <form className="flex flex-col space-y-4" onSubmit={handleSubmit}>
-      <Input placeholder="Your Name" className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700 text-gray-100 placeholder-gray-400" required />
-      <Input type="email" placeholder="Your Email" className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700 text-gray-100 placeholder-gray-400" required />
-      <Input placeholder="Subject" className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700 text-gray-100 placeholder-gray-400" required />
+    <form 
+      className="flex flex-col space-y-4" 
+      onSubmit={handleSubmit}
+      data-netlify="true"
+      name="contact"
+    >
+      <input type="hidden" name="form-name" value="contact" />
+      <Input 
+        name="name"
+        placeholder="Your Name" 
+        className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700 text-gray-100 placeholder-gray-400" 
+        required 
+      />
+      <Input 
+        name="email"
+        type="email" 
+        placeholder="Your Email" 
+        className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700 text-gray-100 placeholder-gray-400" 
+        required 
+      />
+      <Input 
+        name="subject"
+        placeholder="Subject" 
+        className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700 text-gray-100 placeholder-gray-400" 
+        required 
+      />
       <textarea
+        name="message"
         className="flex min-h-[80px] w-full rounded-md border border-gray-700 bg-gray-800 bg-opacity-80 backdrop-blur-sm px-3 py-2 text-sm text-gray-100 placeholder-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
         placeholder="Your Message"
         required
       />
-      <Button type="submit" className="bg-green-600 hover:bg-green-700 text-white" disabled={isSubmitting}>
+      <Button 
+        type="submit" 
+        className="bg-green-600 hover:bg-green-700 text-white" 
+        disabled={isSubmitting}
+      >
         {isSubmitting ? "Sending..." : "Send Message"}
       </Button>
     </form>
