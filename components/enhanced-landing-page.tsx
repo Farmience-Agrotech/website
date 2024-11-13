@@ -313,39 +313,21 @@ function AnimatedListItem({ text }: { text: string }) {
 }
 
 function ContactForm() {
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-
-    try {
-      const formData = new FormData(e.currentTarget)
-      const response = await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData as any).toString()
-      })
-      if (response.ok) {
-        setIsSubmitted(true)
-      } else {
-        throw new Error('Form submission failed')
-      }
-    } catch (error) {
-      console.error('Error:', error)
-      alert('There was an error submitting the form. Please try again.')
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setIsSubmitted(true);
+  };
 
   if (isSubmitted) {
     return (
       <div className="text-green-400 font-semibold">
-        Thank you for your message! We'll get back to you soon.
+        Thank you for your message! We&apos;ll get back to you soon.
       </div>
-    )
+    );
   }
 
   return (
@@ -353,8 +335,9 @@ function ContactForm() {
       className="flex flex-col space-y-4" 
       onSubmit={handleSubmit}
       data-netlify="true"
+      method="POST"
       name="contact"
-    >
+    > 
       <input type="hidden" name="form-name" value="contact" />
       <Input 
         name="name"
@@ -389,7 +372,7 @@ function ContactForm() {
         {isSubmitting ? "Sending..." : "Send Message"}
       </Button>
     </form>
-  )
+  );
 }
 
 import { SVGProps } from "react";
