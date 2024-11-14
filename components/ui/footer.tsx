@@ -91,15 +91,35 @@ function NewsletterForm() {
     const [email, setEmail] = useState("")
     const [isSubmitting, setIsSubmitting] = useState(false)
     const [isSubmitted, setIsSubmitted] = useState(false)
+    const [error, setError] = useState<string | null>(null)
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
         setIsSubmitting(true)
-        setTimeout(() => {
-            setIsSubmitting(false)
+        setError(null)
+
+        try {
+            const response = await fetch('/.netlify/functions/subscribe-newsletter', {
+                method: 'POST',
+                body: JSON.stringify({ email }),
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            })
+
+            if (!response.ok) {
+                const errorData = await response.json()
+                throw new Error(errorData.error || 'Failed to subscribe')
+            }
+
             setIsSubmitted(true)
             setEmail("")
-        }, 1500)
+        } catch (err) {
+            console.error('Error:', err)
+            setError('An error occurred. Please try again.')
+        } finally {
+            setIsSubmitting(false)
+        }
     }
 
     if (isSubmitted) {
@@ -121,6 +141,7 @@ function NewsletterForm() {
             <Button type="submit" disabled={isSubmitting} className="bg-green-600 hover:bg-green-700 text-white">
                 {isSubmitting ? "Subscribing..." : "Subscribe"}
             </Button>
+            {error && <p className="text-sm text-red-500 mt-2">{error}</p>}
         </form>
     )
-}  
+}
