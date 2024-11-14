@@ -1,7 +1,7 @@
 "use client"
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Zap, Cog, Rocket, Target, Lightbulb, Recycle, Users, Brain, Coffee, Sparkles, TrendingUp, Twitter, Linkedin, Mail } from "lucide-react"
+import { Zap, Cog, Rocket, Target, Lightbulb, Recycle, Users, Brain, Sparkles, TrendingUp, Twitter, Linkedin, Mail } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { motion } from "framer-motion"
@@ -38,7 +38,7 @@ export default function AboutPage() {
                 Who We Are
               </h1>
               <p className="text-xl text-center mb-12 text-white font-semibold">
-                &quot;You think you&apos;ve seen innovation? Nah, we&apos;re just getting started!&quot;
+                &quot;Innovation isn&apos;t a trend; it&apos;s our obsession—and we&apos;re only getting warmed up&quot;
               </p>
             </motion.div>
             <motion.div
@@ -49,7 +49,7 @@ export default function AboutPage() {
               <Card className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700">
                 <CardContent className="p-6">
                   <p className="text-lg text-center mb-6 text-white">
-                    At Farmience, we&apos;re the rebels of resource efficiency and sustainability. Founded in May 2024, we&apos;re on a mission to create technology that slashes resource waste and boosts sustainability like never before. We may be a small team, but we&apos;ve got the guts, the brains, and just enough caffeine in our veins to change the world. We&apos;re combining cutting-edge tech, innovative solutions, and an obsession with sustainability to bring about a greener, smarter future. 🌱💡
+                    At Farmience, we&apos;re not just following trends—we&apos;re setting them. Established in May 2024, our mission is clear: develop technology that cuts resource waste and drives sustainability to new heights. We may be small, but we&apos;ve got the vision, the expertise, and the drive to make a real impact. With a focus on cutting-edge innovation and a relentless commitment to sustainability, we&apos;re paving the way for a smarter, greener future—one breakthrough at a time. 🌱⚡
                   </p>
                   <div className="flex justify-center space-x-4">
                     <div className="flex items-center">
@@ -61,8 +61,8 @@ export default function AboutPage() {
                       <span className="text-white">Sustainable</span>
                     </div>
                     <div className="flex items-center">
-                      <Coffee className="h-6 w-6 text-green-400 mr-2" />
-                      <span className="text-white">Caffeinated</span>
+                      <Sparkles className="h-6 w-6 text-green-400 mr-2" />
+                      <span className="text-white">Impactful</span>
                     </div>
                   </div>
                 </CardContent>
@@ -72,7 +72,7 @@ export default function AboutPage() {
         </section>
 
         <section className="relative w-full py-12 md:py-24 lg:py-32 bg-gray-800 bg-opacity-50">
-          <div className="container max-w-6xl px-4 md:px-6 mx-auto">
+          <div className="container max-w-6xl px</div>-4 md:px-6 mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -94,7 +94,7 @@ export default function AboutPage() {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-white">It all kicked off at a humble tea stall. Over piping hot chai and biscuits, we realized that solving the world&apos;s environmental mess didn&apos;t need suits and boardrooms. It needed tech, grit, and people who gave a damn.</p>
+                    <p className="text-white">It all started with a no-bull vision: disrupt the status quo and reshape sustainability from the roots up.</p>
                   </CardContent>
                 </Card>
                 <Card className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700">
@@ -105,7 +105,7 @@ export default function AboutPage() {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-white">We brought together a diverse team of innovators, each with unique skills but a shared passion for sustainability, resource-efficiency, and automation. Our differences became our strength.</p>
+                    <p className="text-white">We brought together a squad of tech experts, green visionaries, and zero patience for half-measures.</p>
                   </CardContent>
                 </Card>
                 <Card className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700">
@@ -116,7 +116,7 @@ export default function AboutPage() {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-white">In May 2024, we officially launched Farmience. Our mission: to revolutionize industries through innovative, sustainable technologies that maximize efficiency and minimize negative environmental impact.</p>
+                    <p className="text-white">May 2024: Farmience hits the ground running with a mission to redefine the future through tech, resource efficiency, and sheer determination.</p>
                   </CardContent>
                 </Card>
               </div>
@@ -133,7 +133,7 @@ export default function AboutPage() {
             >
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-green-400">Our Vision</h2>
               <p className="text-xl text-center mb-6 text-white font-semibold">
-                &quot;We&apos;re not here to blend in; we&apos;re here to lead the change!&quot;
+                &quot;Drive innovation that transforms industries through smarter, more sustainable solutions, maximizing resource efficiency for a greener future.&quot;
               </p>
             </motion.div>
             <motion.div
@@ -144,7 +144,7 @@ export default function AboutPage() {
               <Card className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700">
                 <CardContent className="p-6">
                   <p className="text-lg text-center mb-6 text-white">
-                    Our vision? It&apos;s simple: To lead the world towards a future where technology and sustainability go hand-in-hand. We&apos;re creating tech solutions that are not just efficient, but game-changing in reducing waste and conserving resources, all while maximizing productivity. Imagine a world where your business runs at full throttle without leaving a huge carbon footprint behind. Yeah, we&apos;re building that future.
+                    Lead the charge in transforming industries with groundbreaking technologies that enhance resource efficiency and drive sustainability. We are committed to creating intelligent, scalable solutions that not only address the challenges of today but also build a smarter, greener future for generations to come. Our goal is to innovate across sectors, redefining what's possible and making sustainability an integral part of every industry we touch.
                   </p>
                   <div className="flex justify-center">
                     <Target className="h-16 w-16 text-green-400" />
@@ -164,7 +164,7 @@ export default function AboutPage() {
             >
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-green-400">Our Mission</h2>
               <p className="text-xl text-center mb-6 text-white font-semibold">
-                &quot;Less talk, more action. Let&apos;s build a better, cleaner world—one byte at a time.&quot;
+                &quot;Develop innovative, scalable technologies that optimize resource use, reduce waste, and promote sustainability&quot;
               </p>
             </motion.div>
             <motion.div
@@ -175,7 +175,7 @@ export default function AboutPage() {
               <Card className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700">
                 <CardContent className="p-6">
                   <p className="text-lg text-center mb-6 text-white">
-                    We&apos;re on a mission to make sustainability a reality through practical, tech-driven solutions. Our goal is to give businesses the tools they need to minimize waste, optimize resources, and enhance productivity. No fluff. Just tech that works. From energy conservation to efficient use of raw materials, we&apos;re making sure that sustainability is more than a buzzword—it&apos;s how the future is built. 🔥
+                    Revolutionize industries by developing advanced, scalable technologies that address the critical challenges of resource waste and sustainability. We are committed to creating innovative solutions that optimize resource use, reduce environmental impact, and drive long-term efficiency. By leveraging cutting-edge technologies like AI, IoT, and automation, we aim to transform industries ranging from agriculture to energy, offering smarter, greener alternatives that not only meet today’s needs but also ensure a sustainable future for generations to come. Through relentless innovation and a focus on practical impact, we strive to lead the way in shaping a more sustainable world.
                   </p>
                   <div className="flex justify-center space-x-4">
                     <div className="flex flex-col items-center">
@@ -223,7 +223,7 @@ export default function AboutPage() {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-white">We approach every challenge with fresh eyes and innovative ideas. Our team thrives on thinking outside the box to create solutions that others might overlook.</p>
+                    <p className="text-white">We challenge every norm, design every breakthrough to solve what others ignore.</p>
                   </CardContent>
                 </Card>
                 <Card className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700">
@@ -234,7 +234,7 @@ export default function AboutPage() {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-white">We&apos;re never satisfied with the status quo. Our approach involves constant iteration and improvement, always pushing the boundaries of what&apos;s possible.</p>
+                    <p className="text-white">We&apos;re never &quot;done&quot;; our obsession with refining means there&apos;s always another level to hit.</p>
                   </CardContent>
                 </Card>
                 <Card className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700">
@@ -245,7 +245,7 @@ export default function AboutPage() {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-white">We believe in the power of collaboration. By working closely with our clients and partners, we ensure our solutions are tailored to real-world needs and challenges.</p>
+                    <p className="text-white">Partnerships with purpose—because true change takes a global team effort.</p>
                   </CardContent>
                 </Card>
               </div>
@@ -275,11 +275,11 @@ export default function AboutPage() {
                   <CardHeader>
                     <CardTitle className="flex items-center text-green-400">
                       <Users className="h-6 w-6 mr-2" />
-                      Scrappy but Smart
+                      Strategy Built Smart
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-white">We&apos;re a small team, but we&apos;re nimble and laser-focused on building the future of tech-driven sustainability. We move fast, innovate faster, and leave bureaucracy in the dust.</p>
+                    <p className="text-white">Every tool, every solution, is made to maximize impact and waste nothing.</p>
                   </CardContent>
                 </Card>
                 <Card className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700">
@@ -290,7 +290,7 @@ export default function AboutPage() {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-white">Everything we do centers on maximizing efficiency. Whether it&apos;s reducing energy consumption, cutting water waste, or finding new ways to recycle materials, we&apos;re always thinking about how to do more with less.</p>
+                    <p className="text-white">We're ruthless in efficiency—constantly re-engineering to do more with less.</p>
                   </CardContent>
                 </Card>
                 <Card className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700">
@@ -301,7 +301,7 @@ export default function AboutPage() {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-white">From AI to IoT to autonomous systems, we&apos;re leveraging the latest tech to create smarter, more efficient solutions.</p>
+                    <p className="text-white">From AI to autonomous systems, we&apos;re bringing next-gen tech to next-gen problems.</p>
                   </CardContent>
                 </Card>
               </div>
@@ -318,7 +318,7 @@ export default function AboutPage() {
             >
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-green-400">Our Values</h2>
               <p className="text-xl text-center mb-6 text-white font-semibold">
-                &quot;We believe in doing things that make a difference.&quot;
+                &quot;We're here to make a dent in the world—and we do it right.&quot;
               </p>
             </motion.div>
             <motion.div
@@ -452,7 +452,7 @@ export default function AboutPage() {
           </div>
         </section >
       </main >
-      <Footer/>
+      <Footer />
     </div >
   )
 }
