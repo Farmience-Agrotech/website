@@ -19,6 +19,15 @@ export const metadata: Metadata = {
   description: "Revolutionizing resource efficiency and sustainability with Farmience",
 };
 
+declare global {
+  // Extending process.env to include our custom variable
+  namespace NodeJS {
+    interface ProcessEnv {
+      CLARITY_PROJECT_ID: string;
+    }
+  }
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
