@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
-import { Droplet, Zap, Cog, ChevronDown, Award} from "lucide-react"
+import { Droplet, Zap, Cog, ChevronDown, Award } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import Footer from "@/components/ui/footer"
@@ -47,7 +47,7 @@ export function EnhancedLandingPage() {
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900 text-gray-100 relative">
       <DynamicBackground />
-      <Header/>
+      <Header />
 
       <main className="flex-1 pt-14">
         <section id="home" className="relative w-full py-12 md:py-24 lg:py-32 xl:py-48 flex items-center justify-center">
@@ -177,7 +177,7 @@ export function EnhancedLandingPage() {
           </div>
         </section>
       </main>
-      <Footer/>
+      <Footer />
     </div>
   )
 }
@@ -316,10 +316,36 @@ function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setIsSubmitted(true);
+
+    // Create a FormData object, snagging the data right from the form
+    const formData = new FormData(e.currentTarget);
+
+    // Convert form data into URL-encoded format that Netlify craves
+    const data = new URLSearchParams(
+      Array.from(formData.entries()).reduce((obj, [key, value]) => {
+        obj[key] = value.toString();
+        return obj;
+      }, {} as Record<string, string>)
+    ).toString();
+
+    try {
+      // Here’s the sneaky fetch to trick Netlify
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: data
+      });
+
+      // Mark as submitted if everything didn’t blow up
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error("Error sending form data: ", error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (isSubmitted) {
@@ -331,32 +357,32 @@ function ContactForm() {
   }
 
   return (
-    <form 
-      className="flex flex-col space-y-4" 
+    <form
+      className="flex flex-col space-y-4"
       onSubmit={handleSubmit}
       data-netlify="true"
       method="POST"
       name="contact"
-    > 
+    >
       <input type="hidden" name="form-name" value="contact" />
-      <Input 
+      <Input
         name="name"
-        placeholder="Your Name" 
-        className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700 text-gray-100 placeholder-gray-400" 
-        required 
+        placeholder="Your Name"
+        className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700 text-gray-100 placeholder-gray-400"
+        required
       />
-      <Input 
+      <Input
         name="email"
-        type="email" 
-        placeholder="Your Email" 
-        className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700 text-gray-100 placeholder-gray-400" 
-        required 
+        type="email"
+        placeholder="Your Email"
+        className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700 text-gray-100 placeholder-gray-400"
+        required
       />
-      <Input 
+      <Input
         name="subject"
-        placeholder="Subject" 
-        className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700 text-gray-100 placeholder-gray-400" 
-        required 
+        placeholder="Subject"
+        className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700 text-gray-100 placeholder-gray-400"
+        required
       />
       <textarea
         name="message"
@@ -364,9 +390,9 @@ function ContactForm() {
         placeholder="Your Message"
         required
       />
-      <Button 
-        type="submit" 
-        className="bg-green-600 hover:bg-green-700 text-white" 
+      <Button
+        type="submit"
+        className="bg-green-600 hover:bg-green-700 text-white"
         disabled={isSubmitting}
       >
         {isSubmitting ? "Sending..." : "Send Message"}
