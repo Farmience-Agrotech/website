@@ -313,58 +313,47 @@ function AnimatedListItem({ text }: { text: string }) {
 }
 
 function ContactForm() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitted, setIsSubmitted] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+    e.preventDefault()
+    setIsSubmitting(true)
+    setError(null)
 
-    // Create a FormData object, snagging the data right from the form
-    const formData = new FormData(e.currentTarget);
-
-    // Convert form data into URL-encoded format that Netlify craves
-    const data = new URLSearchParams(
-      Array.from(formData.entries()).reduce((obj, [key, value]) => {
-        obj[key] = value.toString();
-        return obj;
-      }, {} as Record<string, string>)
-    ).toString();
+    const formData = new FormData(e.currentTarget)
+    const data = Object.fromEntries(formData)
 
     try {
-      // Here’s the sneaky fetch to trick Netlify
-      await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: data
-      });
+      const response = await fetch('/.netlify/functions/submit-contact-form', {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
 
-      // Mark as submitted if everything didn’t blow up
-      setIsSubmitted(true);
-    } catch (error) {
-      console.error("Error sending form data: ", error);
+      if (!response.ok) {
+        throw new Error('Failed to submit form')
+      }
+
+      setIsSubmitted(true)
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false)
     }
-  };
+  }
 
   if (isSubmitted) {
     return (
       <div className="text-green-400 font-semibold">
         Thank you for your message! We&apos;ll get back to you soon.
       </div>
-    );
+    )
   }
 
   return (
-    <form
-      className="flex flex-col space-y-4"
-      onSubmit={handleSubmit}
-      data-netlify="true"
-      method="POST"
-      name="contact"
-    >
-      <input type="hidden" name="form-name" value="contact" />
+    <form className="flex flex-col space-y-4" onSubmit={handleSubmit}>
       <Input
         name="name"
         placeholder="Your Name"
@@ -397,8 +386,9 @@ function ContactForm() {
       >
         {isSubmitting ? "Sending..." : "Send Message"}
       </Button>
+      {error && <div className="text-red-500">{error}</div>}
     </form>
-  );
+  )
 }
 
 import { SVGProps } from "react";
