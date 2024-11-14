@@ -8,7 +8,7 @@ const supabase = createClient(supabaseUrl, supabaseKey)
 export const handler = async (event) => {
   // Set CORS headers
   const headers = {
-    'Access-Control-Allow-Origin': '*', // Allow all origins
+    'Access-Control-Allow-Origin': '*',
     'Access-Control-Allow-Headers': 'Content-Type',
     'Access-Control-Allow-Methods': 'POST, OPTIONS',
   }
@@ -31,27 +31,46 @@ export const handler = async (event) => {
   }
 
   try {
-    const { name, email, subject, message } = JSON.parse(event.body)
+    const { email } = JSON.parse(event.body)
+
+    // Validate email
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      return {
+        statusCode: 400,
+        headers,
+        body: JSON.stringify({ error: 'Invalid email address' })
+      }
+    }
 
     const { data, error } = await supabase
-      .from('contact_submissions')
-      .insert([
-        { name, email, subject, message }
-      ])
+      .from('newsletter_subscriptions')
+      .insert([{ email }])
 
-    if (error) throw error
+    if (error) {
+      // Check if the error is due to a unique constraint violation
+      if (error.code === '23505') {
+        return {
+          statusCode: 400,
+          headers,
+          body: JSON.stringify({ error: 'This email is already subscribed' })
+        }
+      }
+      throw error
+    }
+
+    console.log(`New newsletter subscription: ${email}`)
 
     return {
       statusCode: 200,
       headers,
-      body: JSON.stringify({ message: 'Form submitted successfully' })
+      body: JSON.stringify({ message: 'Subscribed successfully' })
     }
   } catch (error) {
     console.error('Error:', error)
     return {
       statusCode: 500,
       headers,
-      body: JSON.stringify({ error: 'Failed to submit form' })
+      body: JSON.stringify({ error: 'Failed to subscribe' })
     }
   }
 }
