@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Clarity from '@microsoft/clarity'
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -23,6 +24,11 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  if (typeof window !== "undefined") {
+    Clarity.init(CLARITY_PROJECT_ID);
+  }
+
   return (
     <html lang="en">
       <body
