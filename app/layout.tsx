@@ -21,10 +21,8 @@ export const metadata: Metadata = {
 
 declare global {
   // Extending process.env to include our custom variable
-  namespace NodeJS {
-    interface ProcessEnv {
-      CLARITY_PROJECT_ID: string;
-    }
+  interface ProcessEnv {
+    CLARITY_PROJECT_ID: string;
   }
 }
 
