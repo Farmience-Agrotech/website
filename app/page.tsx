@@ -59,7 +59,7 @@ export default function EnhancedLandingPage() {
                     Maximize Efficiency, Minimize Waste — Pioneering Sustainable Tech for the Future
                   </h1>
                   <p className="mx-auto max-w-[700px] text-gray-200 md:text-xl">
-                    At Farmience, we engineer intelligent systems that drive resource efficiency, boost productivity, and enable true sustainability. Our solutions don&apos;t just enhance operations—they redefine what's possible beyond the horizon. 🚀🌱
+                    At Farmience, we engineer intelligent systems that drive resource efficiency, boost productivity, and enable true sustainability. Our solutions don&apos;t just enhance operations—they redefine what&apos;s possible beyond the horizon. 🚀🌱
                   </p>
                 </div>
                 <div className="space-x-4">

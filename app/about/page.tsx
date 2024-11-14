@@ -144,7 +144,7 @@ export default function AboutPage() {
               <Card className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700">
                 <CardContent className="p-6">
                   <p className="text-lg text-center mb-6 text-white">
-                    Lead the charge in transforming industries with groundbreaking technologies that enhance resource efficiency and drive sustainability. We are committed to creating intelligent, scalable solutions that not only address the challenges of today but also build a smarter, greener future for generations to come. Our goal is to innovate across sectors, redefining what's possible and making sustainability an integral part of every industry we touch.
+                    Lead the charge in transforming industries with groundbreaking technologies that enhance resource efficiency and drive sustainability. We are committed to creating intelligent, scalable solutions that not only address the challenges of today but also build a smarter, greener future for generations to come. Our goal is to innovate across sectors, redefining what&apos;s possible and making sustainability an integral part of every industry we touch.
                   </p>
                   <div className="flex justify-center">
                     <Target className="h-16 w-16 text-green-400" />
@@ -290,7 +290,7 @@ export default function AboutPage() {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-white">We're ruthless in efficiency—constantly re-engineering to do more with less.</p>
+                    <p className="text-white">We&apos;re ruthless in efficiency—constantly re-engineering to do more with less.</p>
                   </CardContent>
                 </Card>
                 <Card className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700">
@@ -318,7 +318,7 @@ export default function AboutPage() {
             >
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-green-400">Our Values</h2>
               <p className="text-xl text-center mb-6 text-white font-semibold">
-                &quot;We're here to make a dent in the world—and we do it right.&quot;
+                &quot;We&apos;re here to make a dent in the world—and we do it right.&quot;
               </p>
             </motion.div>
             <motion.div
