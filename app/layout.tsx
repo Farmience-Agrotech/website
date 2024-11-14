@@ -3,6 +3,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Clarity from '@microsoft/clarity'
 
+const clarityProjectID = process.env.CLARITY_PROJECT_ID
+
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -19,21 +21,14 @@ export const metadata: Metadata = {
   description: "Revolutionizing resource efficiency and sustainability with Farmience",
 };
 
-declare global {
-  // Extending process.env to include our custom variable
-  interface ProcessEnv {
-    CLARITY_PROJECT_ID: string;
-  }
-}
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
 
-  if (typeof window !== "undefined") {
-    Clarity.init(CLARITY_PROJECT_ID);
+  if (typeof window !== "undefined" && clarityProjectID) {
+    Clarity.init(clarityProjectID);
   }
 
   return (
