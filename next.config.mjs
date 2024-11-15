@@ -8,5 +8,4 @@ export default {
     loader: 'imgix',
     path: isProd ? 'https://farmience.com' : '',
   },
-  script: [{src: '/clarity.js', defer: true}],
 };
