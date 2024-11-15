@@ -262,7 +262,7 @@ export default function AboutPage() {
             >
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-green-400">Why We&apos;re Different</h2>
               <p className="text-xl text-center mb-6 text-white font-semibold">
-                &quot;Because mediocrity is for amateurs, and we&apos;re here to disrupt!&quot;
+                &quot;Focused on results, driven by innovation—we build for the future, not the status quo&quot;
               </p>
             </motion.div>
             <motion.div
@@ -318,7 +318,7 @@ export default function AboutPage() {
             >
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-green-400">Our Values</h2>
               <p className="text-xl text-center mb-6 text-white font-semibold">
-                &quot;We&apos;re here to make a dent in the world—and we do it right.&quot;
+                &quot;We&apos;re here to make an impact—and we do it the right way&quot;
               </p>
             </motion.div>
             <motion.div
@@ -331,15 +331,15 @@ export default function AboutPage() {
                   <ul className="space-y-4">
                     <li className="flex items-start">
                       <Recycle className="h-6 w-6 text-green-400 mr-2 flex-shrink-0" />
-                      <span className="text-white">Resource Efficiency: It&apos;s in our DNA. Every solution we create is designed to optimize the use of resources—whether it&apos;s water, energy, or materials.</span>
+                      <span className="text-white">Resource Efficiency: Embedded in our DNA. Every solution we design prioritizes optimizing resources—be it water, energy, or materials—without compromise.</span>
                     </li>
                     <li className="flex items-start">
                       <Lightbulb className="h-6 w-6 text-green-400 mr-2 flex-shrink-0" />
-                      <span className="text-white">Innovation with Purpose: We&apos;re not just innovating for the sake of it. Every breakthrough we make is aimed at solving real-world problems, with sustainability at the core.</span>
+                      <span className="text-white">Purpose-Driven Innovation: We don&apos;t innovate for the sake of it. Every breakthrough addresses real-world challenges, with sustainability at the heart of everything we do.</span>
                     </li>
                     <li className="flex items-start">
                       <Users className="h-6 w-6 text-green-400 mr-2 flex-shrink-0" />
-                      <span className="text-white">Collaboration: We know we can&apos;t do this alone. That&apos;s why we partner with others who share our vision for a sustainable, tech-driven future.</span>
+                      <span className="text-white">Collaboration: We know the importance of unity. That&apos;s why we align with partners who share our commitment to a sustainable, tech-driven future.</span>
                     </li>
                   </ul>
                 </CardContent>
@@ -379,7 +379,7 @@ export default function AboutPage() {
                     </div>
                     <h2 className="text-xl font-semibold mb-2 text-green-400">Tejas</h2>
                     <h4 className="text-xl font-semibold mb-2 text-green-200">Founder & CEO</h4>
-                    <p className="text-white text-center">The visionary, the hustler, and your favorite problem solver. Leading the charge with bold ideas and a &apos;make it happen&apos; attitude. 🧠💪</p>
+                    <p className="text-white text-center">&quot;Driving innovation with bold ideas and a relentless pursuit of impact&quot;</p>
                     <div className="flex space-x-4 mt-4">
                       <Link href="#" aria-label="LinkedIn" className="text-gray-400 hover:text-green-400 transition-colors">
                         <Linkedin className="h-5 w-5" />
@@ -406,7 +406,7 @@ export default function AboutPage() {
                     </div>
                     <h3 className="text-xl font-semibold mb-2 text-green-400">Lalithesh</h3>
                     <h4 className="text-xl font-semibold mb-2 text-green-200">Chief Technical Officer</h4>
-                    <p className="text-white text-center">The wizard of tech, bringing the vision to life. If it&apos;s broken, he&apos;ll fix it; if it&apos;s impossible, he&apos;ll make it possible. 🔧👨‍💻</p>
+                    <p className="text-white text-center">Creative problem-solver, passionate about driving sustainable change</p>
                     <div className="flex space-x-4 mt-4">
                       <Link href="#" aria-label="LinkedIn" className="text-gray-400 hover:text-green-400 transition-colors">
                         <Linkedin className="h-5 w-5" />
@@ -433,7 +433,7 @@ export default function AboutPage() {
                     </div>
                     <h3 className="text-xl font-semibold mb-2 text-green-400">Pragati</h3>
                     <h4 className="text-xl font-semibold mb-2 text-green-200">Chief Operations Officer</h4>
-                    <p className="text-white text-center">The strategist, always 10 steps ahead. From operations to partnerships, she&apos;s the glue holding it all together. 🗣️🔥</p>
+                    <p className="text-white text-center">Strategic thinker, focused on transforming challenges into opportunities</p>
                     <div className="flex space-x-4 mt-4">
                       <Link href="#" aria-label="LinkedIn" className="text-gray-400 hover:text-green-400 transition-colors">
                         <Linkedin className="h-5 w-5" />
