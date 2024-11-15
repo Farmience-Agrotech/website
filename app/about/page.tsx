@@ -49,7 +49,7 @@ export default function AboutPage() {
               <Card className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700">
                 <CardContent className="p-6">
                   <p className="text-lg text-center mb-6 text-white">
-                    At Farmience, we're not just following trends—we&apos;re setting them. Founded in May 2024, our mission is clear: to create technology that slashes resource waste and pushes sustainability to new heights. We may be a small team, but we&apos;ve got the vision, the expertise, and the grit to make a real impact. With a relentless focus on cutting-edge innovation and an unyielding commitment to sustainability, we&apos;re paving the way for a smarter, greener future.
+                    At Farmience, we&apos;re not just following trends—we&apos;re setting them. Founded in May 2024, our mission is clear: to create technology that slashes resource waste and pushes sustainability to new heights. We may be a small team, but we&apos;ve got the vision, the expertise, and the grit to make a real impact. With a relentless focus on cutting-edge innovation and an unyielding commitment to sustainability, we&apos;re paving the way for a smarter, greener future.
                   </p>
                   <div className="flex justify-center space-x-4">
                     <div className="flex items-center">
