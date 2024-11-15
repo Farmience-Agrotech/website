@@ -49,7 +49,7 @@ export default function AboutPage() {
               <Card className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700">
                 <CardContent className="p-6">
                   <p className="text-lg text-center mb-6 text-white">
-                    At Farmience, we&apos;re not just following trends—we&apos;re setting them. Established in May 2024, our mission is clear: develop technology that cuts resource waste and drives sustainability to new heights. We may be small, but we&apos;ve got the vision, the expertise, and the drive to make a real impact. With a focus on cutting-edge innovation and a relentless commitment to sustainability, we&apos;re paving the way for a smarter, greener future—one breakthrough at a time. 🌱⚡
+                    At Farmience, we're not just following trends—we&apos;re setting them. Founded in May 2024, our mission is clear: to create technology that slashes resource waste and pushes sustainability to new heights. We may be a small team, but we&apos;ve got the vision, the expertise, and the grit to make a real impact. With a relentless focus on cutting-edge innovation and an unyielding commitment to sustainability, we&apos;re paving the way for a smarter, greener future.
                   </p>
                   <div className="flex justify-center space-x-4">
                     <div className="flex items-center">
@@ -133,7 +133,7 @@ export default function AboutPage() {
             >
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-green-400">Our Vision</h2>
               <p className="text-xl text-center mb-6 text-white font-semibold">
-                &quot;Drive innovation that transforms industries through smarter, more sustainable solutions, maximizing resource efficiency for a greener future.&quot;
+                &quot;Setting a new standard for a sustainable future&quot;
               </p>
             </motion.div>
             <motion.div
@@ -144,7 +144,7 @@ export default function AboutPage() {
               <Card className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700">
                 <CardContent className="p-6">
                   <p className="text-lg text-center mb-6 text-white">
-                    Lead the charge in transforming industries with groundbreaking technologies that enhance resource efficiency and drive sustainability. We are committed to creating intelligent, scalable solutions that not only address the challenges of today but also build a smarter, greener future for generations to come. Our goal is to innovate across sectors, redefining what&apos;s possible and making sustainability an integral part of every industry we touch.
+                    To lead a transformative shift across industries, setting a new standard where sustainability and resource efficiency are essential and achievable. We&apos;re creating intelligent, scalable solutions that redefine what&apos;s possible, empowering every sector we touch to operate smarter, cleaner, and with greater impact.
                   </p>
                   <div className="flex justify-center">
                     <Target className="h-16 w-16 text-green-400" />
@@ -164,7 +164,7 @@ export default function AboutPage() {
             >
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-green-400">Our Mission</h2>
               <p className="text-xl text-center mb-6 text-white font-semibold">
-                &quot;Develop innovative, scalable technologies that optimize resource use, reduce waste, and promote sustainability&quot;
+                &quot;Driving impact through innovation and technology&quot;
               </p>
             </motion.div>
             <motion.div
@@ -175,7 +175,7 @@ export default function AboutPage() {
               <Card className="bg-gray-800 bg-opacity-80 backdrop-blur-sm border-gray-700">
                 <CardContent className="p-6">
                   <p className="text-lg text-center mb-6 text-white">
-                    Revolutionize industries by developing advanced, scalable technologies that address the critical challenges of resource waste and sustainability. We are committed to creating innovative solutions that optimize resource use, reduce environmental impact, and drive long-term efficiency. By leveraging cutting-edge technologies like AI, IoT, and automation, we aim to transform industries ranging from agriculture to energy, offering smarter, greener alternatives that not only meet today’s needs but also ensure a sustainable future for generations to come. Through relentless innovation and a focus on practical impact, we strive to lead the way in shaping a more sustainable world.
+                  Farmience is on a mission to drive meaningful change through technology. We&apos;re dedicated to developing advanced, scalable tools that solve critical challenges in resource efficiency and sustainability. By harnessing AI, IoT, and automation, we aim to reshape industries from agriculture to energy, delivering solutions that meet today&apos;s demands while safeguarding tomorrow. With each innovation, we&apos;re not just meeting needs—we&apos;re building a sustainable future.
                   </p>
                   <div className="flex justify-center space-x-4">
                     <div className="flex flex-col items-center">
@@ -206,7 +206,7 @@ export default function AboutPage() {
             >
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-green-400">Our Approach</h2>
               <p className="text-xl text-center mb-6 text-white font-semibold">
-                &quot;Solving tomorrow&apos;s problems, today!&quot;
+                &quot;Engineering solutions today that shape a smarter, sustainable tomorrow&quot;
               </p>
             </motion.div>
             <motion.div
