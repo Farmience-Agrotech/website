@@ -1,7 +1,7 @@
-import type { Metadata } from "next";
-import localFont from "next/font/local";
-import "./globals.css";
-import ClarityAnalytics from '@/components/clarity-analytics'
+import type { Metadata } from "next"
+import localFont from "next/font/local"
+import "./globals.css"
+import Metrics from './metrics'
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,13 +26,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <ClarityAnalytics />
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <Metrics/>
       </body>
     </html>
   );
